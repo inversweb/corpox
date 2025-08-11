@@ -1,0 +1,245 @@
+/*-----------------------
+    Footer Style Here  
+------------------------*/
+.logo {
+    a {
+        img {
+            max-height: 55px;
+            max-width: 140px;
+        }
+    }
+}
+
+.footer-style-1 {
+    .footer-top {
+        padding: 120px 0;
+        .tmp-footer-widget {
+            .text-big {
+                font-size: 21px;
+                margin-top: 30px;
+                padding-right: 13%;
+                line-height: 37px;
+                font-weight: 500;
+            }
+            .title {
+                font-size: 18px;
+                font-weight: 500;
+                letter-spacing: 1px;
+                margin-bottom: 10px;
+            }
+            .subtitle {
+                font-weight: 400;
+                color: var(--color-body);
+                font-size: 16px;
+                padding-right: 31%;
+                line-height: 28px;
+                margin-bottom: 32px;
+            }
+            .inner {
+                margin-top: 13px;
+            }
+            .footer-link {
+                list-style: none;
+                padding: 0;
+                li {
+                    margin-top: 5px;
+                    margin-bottom: 5px;
+                    a {
+                        font-size: 14px;
+                        display: block;
+                        color: var(--color-body);
+                        line-height: 25px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.newsletter-form {
+    input {
+        flex-grow: 1;
+        width: 100%;
+        margin-right: 10px;
+        height: 70px;
+        font-size: 14px;
+        font-weight: 400;
+        letter-spacing: 0.5px;
+    }
+}
+
+.footer-style-default {
+    .footer-top {
+        padding: 100px 0;
+        padding-bottom: 70px;
+        .tmp-footer-widget {
+            .text-big {
+                font-size: 21px;
+                margin-top: 30px;
+                padding-right: 13%;
+                line-height: 1.7;
+                font-weight: 500;
+                color: var(--color-body);
+                margin-bottom: 30px;
+                @media #{$md-layout} {
+                    font-size: 20px;
+                    padding-right: 0;
+                }
+                @media #{$sm-layout} {
+                    font-size: 20px;
+                    padding-right: 0;
+                }
+            }
+            .title {
+                font-size: 18px;
+                font-weight: 500;
+                letter-spacing: 1px;
+                margin-bottom: 10px;
+            }
+            .subtitle {
+                font-weight: 400;
+                color: var(--color-body);
+                font-size: 16px;
+                padding-right: 31%;
+                line-height: 28px;
+                margin-bottom: 32px;
+                @media #{$sm-layout} {
+                    padding-right: 0;
+                }
+            }
+            .inner {
+                margin-top: 13px;
+            }
+            .footer-link {
+                list-style: none;
+                padding: 0;
+                li {
+                    margin-top: 5px;
+                    margin-bottom: 5px;
+                    a {
+                        font-size: 14px;
+                        display: inline-block;
+                        color: var(--color-body);
+                        line-height: 25px;
+                        transition: 0.3s;
+                        text-transform: capitalize;
+                        &:hover {
+                            color: var(--color-primary);
+                            &::after {
+                                width: 100%;
+                                left: 0;
+                                right: auto;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &.variation-two {
+        border: 1px solid var(--color-border);
+        background: var(--color-card);
+        border-radius: 0;
+        position: relative;
+        z-index: 1;
+
+        .jumping-text{
+            .title{
+                position: absolute;
+                left: 0;
+                font-size: 200px;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                z-index: -1;
+                color: #252525;
+                text-transform: uppercase;
+                font-weight: 900;
+                letter-spacing: 5px;
+                max-width: max-content;
+                min-width: max-content;
+                opacity: .1;
+            }
+        }
+    }
+    &.no-border {
+        border-top: 0;
+    }
+    .shape-area{
+        position: absolute;
+        left: 210px;
+        top: -24px;
+    }
+}
+
+.shape-right-top{
+    position: absolute;
+    right: 0;
+    top: 0;
+    max-width: 500px;
+    z-index: -1;
+    opacity: .6;
+}
+
+
+.footer-style-3 {
+    .tmp-call-to-action.style-8 {
+
+        background-image: url(../images/bg/body_bg.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+    }
+}
+
+
+.footer-style-default.footer-style-1{
+    z-index: 1;
+    .bg-shape{
+        position: absolute;
+        left: 0;
+        top: 30px;
+        width: 100%;
+        z-index: -1;
+        max-width: 100%;
+        max-height: 100%;
+        opacity: .3;
+    }
+}
+.footer-style-default.footer-style-1 .bg-shape img {
+    max-height: 520px;
+    width: 100%;
+}
+
+.service-small-default{
+    .shape-service-1{
+        max-width: 110px !important;
+    }
+}
+.footer-style-3{
+    h2.title{
+        font-size: 60px;
+    }
+}
+
+.bg-line-animatoin-area-global{
+    background-image: url(../images/bg/global-line.png);
+    animation: ShapeAnim 80s linear infinite;
+    height: 30px;
+    width: 100%;
+    background-repeat: repeat;
+    overflow: hidden;
+    bottom: 0;
+    position: absolute;
+}
+.tmp-footer.footer-style-default.variation-two .footer-top{
+    position: relative;
+}
+@keyframes ShapeAnim {
+  0% {
+    background-position: top left;
+  }
+  100% {
+    background-position: top left 2000px;
+  }
+}

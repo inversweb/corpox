@@ -1,0 +1,171 @@
+/*------------------------------
+    Blog Details 
+----------------------------------*/
+
+
+.post-page-banner {
+    .tmp-meta-list {
+        justify-content: center;
+        li {
+            color: var(--color-body);
+            font-size: 16px;
+            margin: 0 10px;
+            margin-top: 9px;
+            @media #{$md-layout} {
+                font-size: 16px;
+                margin-top: 8px;
+            }
+            @media #{$sm-layout} {
+                font-size: 16px;
+                margin-top: 8px;
+            }
+            svg {
+                margin-right: 10px;
+            }
+            a {
+                color: var(--color-body);
+                transition: 0.3s;
+                &:hover {
+                    color: var(--color-primary);
+                }
+            }
+        }
+    }
+
+    .category-list {
+        display: flex;
+        flex-wrap: wrap;
+        list-style: none;
+        justify-content: center;
+        margin: -10px;
+        padding: 0;
+        margin-top: 14px;
+        li {
+            margin: 10px;
+            position: relative;
+            &::after {
+                position: absolute;
+                content: ",";
+                right: -9px;
+            }
+            &:last-child {
+                &::after {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+
+
+.blog-details-content {
+    .category-meta {
+        display: flex;
+        padding: 42px 0;
+        border-top: 1px solid var(--color-border);
+        border-bottom: 1px solid var(--color-border);
+        flex-wrap: wrap;
+        span {
+            &.text {
+                color: var(--color-white);
+                font-size: 22px;
+                display: inline-block;
+                margin: 10px 0;
+                margin-top: 0;
+            }
+        }
+    }
+}
+
+
+.blocks-gallery-grid {
+    display: flex;
+    padding: 0;
+    margin: 0 -10px;
+    list-style: none;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+    li {
+        &.blocks-gallery-item {
+            padding: 0 10px;
+            flex-basis: 33.33%;
+            img {
+                border-radius: var(--radius);
+                width: 100%;
+            }
+            @media #{$sm-layout} {
+                flex-basis: 50%;
+            }
+            @media #{$large-mobile} {
+                flex-basis: 100%;
+            }
+        }
+    }
+}
+
+// About Author 
+.about-author {
+    padding: 40px 0;
+    border-bottom: 1px solid var(--color-border);
+    .media {
+        display: flex;
+        @media #{$small-mobile} {
+            display: block;
+        }
+    }
+    .thumbnail {
+        a {
+            img {
+                border-radius: 6px;
+                margin-right: 30px;
+                margin-bottom: 20px;
+                min-width: 105px;
+                max-height: 105px;
+                @media #{$sm-layout} {
+                    margin-right: 20px;
+                }
+            }
+        }
+    }
+    .media-body {
+        
+        .author-info {
+            .title {
+                margin-bottom: 0;
+                a {
+                    @extend %transition;
+                    .hover-flip-item {
+                        span {
+                            &::before {
+                                color: var(--color-heading);
+                            }
+                            &::after {
+                                color: var(--color-primary);
+                            }
+                        }
+                    }
+                }
+            }
+            .subtitle {
+                color: var(--color-body);
+                display: block;
+                margin-top: 10px;
+                display: block;
+                @media #{$sm-layout} {
+                    margin-top: 8px;
+                }
+            }
+        }
+        .content {
+            .description {
+                margin-top: 6px;
+                margin-bottom: 0;
+            }
+            .social-icon {
+                margin-top: 10px;
+            }
+        }
+    }
+}
+

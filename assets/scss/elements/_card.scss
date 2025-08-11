@@ -1,0 +1,60 @@
+/*----------------------
+    Card Styles  
+-------------------------*/
+.card-box {
+    &.card-style-1 {
+        box-shadow: var(--shadow-lighter);
+        background-color: var(--color-card);
+        padding: 20px;
+        border-radius: 5px;
+        margin-top: 30px;
+        transition: .3s;
+        &:hover{
+            transform: translateY(-5px);
+        }
+    }
+    .inner {
+        .image {
+            a {
+                img {
+                    border-radius: 5px;
+                    width: 100%;
+                }
+            }
+        }
+        .content {
+            padding-top: 20px;
+            .title {
+                font-size: 18px;
+                font-weight: 500;
+                margin-bottom: 14px;
+                a {
+                    @extend %transition;
+                    color: inherit;
+                    &:hover {
+                        color: var(--color-primary);
+                    }
+                }
+            }
+            .description {
+                margin-bottom: 0;
+            }
+            .tmp-btn {
+                margin-top: 20px;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
