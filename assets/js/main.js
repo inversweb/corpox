@@ -47,17 +47,44 @@
             invJs.preloaderWithBannerActivation();
         },
 
-        autoslidertab: function (params) {
-          function tabChange() {
-            var tabs = $(".nav-tabs.splash-nav-tabs > li");
-            var active = tabs.find("a.active");
-            var next = active.parent("li").next("li").find("a");
-            if (next.length === 0) {
-              next = tabs.first().find("a").on("click");
+        autoslidertab: function () {
+
+          $(document).ready(function(){
+            function tabChange() {
+              var tabs = $(".nav-tabs.splash-nav-tabs > li");
+              var active = tabs.find("a.active");
+              var next = active.parent("li").next("li").find("a");
+              if (next.length === 0) {
+                next = tabs.first().find("a").on("click");
+              }
+              next.tab("show");
             }
-            next.tab("show");
-          }
-          var tabCycle = setInterval(tabChange, 5000);
+            var tabCycle = setInterval(tabChange, 5000);
+          })
+
+          $(document).ready(function(){
+            function tabChange() {
+                var tabs = $(".progress-tabs-activation .nav-tabs .nav-link");
+                var active = $(".progress-tabs-activation .nav-tabs .nav-link.active");
+                var next = active.next(".progress-tabs-activation .nav-link");
+
+                // when tab item end it will start form 1st
+                if (next.length === 0) {
+                    next = tabs.first();
+                }
+
+                next.tab("show");
+            }
+
+            // Change after 5 second
+            var tabCycle = setInterval(tabChange, 5000);
+
+
+
+          })
+
+
+          
         },
 
 

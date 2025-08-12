@@ -25,7 +25,21 @@
         padding: 100px 0;
     }
 }
-
+.banner-content-8{
+    .subtitle{
+        color: #fff;
+        margin: 0 10px;
+    }
+    .line-separator{
+        width: 100px;
+    }
+    .line-separator.line-left {
+        background-image: linear-gradient(-90deg, #ffffff, rgba(33, 38, 45, 0)) !important;
+    }
+    .line-separator.line-right {
+        background-image: linear-gradient(90deg, #ffffff, rgba(33, 38, 45, 0)) !important;
+    }
+}
 .height-650 {
     height: 650px;
     display: -webkit-flex;
@@ -1178,9 +1192,9 @@
             }
         }
         .line-border {
-            width: 1px;
-            height: 120px;
-            border-left: 1px solid var(--color-border-2);
+            width: 5px;
+            height: 50px;
+            background: #f4f4f400;
             @media #{$lg-layout} {
                 height: 40px;
             }
@@ -1194,7 +1208,7 @@
         .subtitle {
             font-weight: 400;
             color: var(--color-body);
-            width: 36%;
+            width: 100%;
             margin-top: 30px;
             line-height: 1.6;
             font-size: 18px;
@@ -1205,12 +1219,15 @@
                 width: 100%;
             }
         }
+        .pres-line-separator-wrapper{
+            margin-top: 60px;
+        }
     }
 
     .rwt-card {
         margin-right: -100px;
         transition: 0.4s;
-        height: 900px;
+        height: auto;
         @media #{$sm-layout} {
             margin-right: 0;
             transition: 0.4s;
@@ -1267,7 +1284,7 @@
     overflow: hidden;
     @extend %transition;
     border: 2px solid var(--color-border);
-    border-radius: 64px;
+    border-radius: 30px;
     @media #{$sm-layout} {
         border-radius: 0;
     }
@@ -2018,6 +2035,26 @@ body {
                     }
                 }
             }
+        }
+    }
+}
+
+.tmp-modern-slider .banner-content-9{
+    .title{
+        font-size: 80px;
+        line-height: 1.4;
+        span{
+            color: var(--color-primary);
+            font-size: 80px;
+        }
+    }
+    .pres-line-separator-wrapper{
+        .subtitle{
+            color: #fff;
+        }
+        .line-separator{
+            width: 100px;
+            background-image: linear-gradient(90deg, #ffffff, rgba(33, 38, 45, 0));
         }
     }
 }

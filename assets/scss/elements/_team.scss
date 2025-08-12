@@ -119,6 +119,10 @@
 -----------------------*/
 .team-style-two {
     position: relative;
+    transition: .3s;
+    &:hover{
+        transform: translateY(-5px);
+    }
     .inner {
         .thumbnail {
             position: relative;
