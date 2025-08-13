@@ -47,43 +47,44 @@
         },
 
         backtotopLeft: function () {
-          jQuery(function ($) {
+ jQuery(function ($) {
 
-              var scrollTrigger = 100; // show করার জন্য স্ক্রল ট্রিগার
-              var shown = false;
+    var scrollTrigger = 100; // show করার জন্য স্ক্রল ট্রিগার
+    var shown = false;
 
-              function backToTopHandler() {
-                  var scrollTop = $(window).scrollTop();
+    function backToTopHandler() {
+        var scrollTop = $(window).scrollTop();
 
-                  // Show / Hide elements
-                  if (scrollTop > scrollTrigger && !shown) {
-                      $('.show-on-scroll').addClass('show').removeClass('hide');
-                      shown = true;
-                  }
-                  if (scrollTop <= scrollTrigger && shown) {
-                      $('.show-on-scroll').addClass('hide').removeClass('show');
-                      shown = false;
-                  }
+        // Show / Hide elements
+        if (scrollTop > scrollTrigger && !shown) {
+            $('.show-on-scroll').addClass('show').removeClass('hide');
+            shown = true;
+        }
+        if (scrollTop <= scrollTrigger && shown) {
+            $('.show-on-scroll').addClass('hide').removeClass('show');
+            shown = false;
+        }
 
-                  // Scroll progress (max height = 100px)
-                  var pageHeight = $(document).height() - $(window).height();
-                  var progress = (scrollTop / pageHeight) * 100; // % progress
-                  var maxHeight = 100; // px
-                  var barHeight = (progress / 100) * maxHeight;
+        // Scroll progress (max height = 100px)
+        var pageHeight = $(document).height() - $(window).height();
+        var progress = (scrollTop / pageHeight) * 100; // % progress
+        var maxHeight = 100; // px
+        var barHeight = (progress / 100) * maxHeight;
 
-                  $(".scrollbar-v").css("height", barHeight + "px");
-              }
+        $(".scrollbar-v").css("height", barHeight + "px");
+    }
 
-              // Scroll to top click
-              $('.float-text a').on('click', function (e) {
-                  e.preventDefault();
-                  $('html, body').stop(true).animate({ scrollTop: 0 }, 700);
-              });
+    // Scroll to top click (float-text + scrollbar-v)
+    $('.float-text a, .scrollbar-v').on('click', function (e) {
+        e.preventDefault();
+        $('html, body').stop(true).animate({ scrollTop: 0 }, 700);
+    });
 
-              // Scroll listener
-              $(window).on('scroll', backToTopHandler);
+    // Scroll listener
+    $(window).on('scroll', backToTopHandler);
 
-          });
+});
+
 
 
         },
@@ -398,7 +399,7 @@
                 cssEase: 'linear',
                 fade: true,
                 autoplay: true, 
-                autoplaySpeed: 2000,
+                autoplaySpeed: 3000,
             });
 
             $('.brand-carousel-activation').not('.slick-initialized').slick({

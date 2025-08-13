@@ -1929,7 +1929,7 @@ body {
 }
 .single-banner{
     .line{
-        background: var(--color-primary);
+        background: var(--color-white);
     }
 }
 
@@ -2056,5 +2056,29 @@ body {
             width: 100px;
             background-image: linear-gradient(90deg, #ffffff, rgba(33, 38, 45, 0));
         }
+    }
+}
+
+.banner-12-radious{
+    border-radius: 8px;
+    overflow: hidden;
+}
+.banner-small-right{
+    .slider-bg-dot-shape{
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
+}
+
+.banner-right-picking-image{
+    position: relative;
+    .right-image-absolute{
+        position: absolute;
+        right: -132px;
+        left: auto;
+        bottom: 0;
+        top: 10%;
+        max-width: 171px;
     }
 }
