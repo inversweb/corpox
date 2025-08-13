@@ -246,6 +246,24 @@
 
 
 .tmp-footer-style-3{
+    .odometer{
+        color: var(--color-primary);
+        font-weight: 600;
+        font-size: 38px;
+        margin-right: 20px;
+    }
+    .line-separator {
+        position: relative;
+        background-image: linear-gradient(90deg, #ffffff, rgba(33, 38, 45, 0));
+        width: 120px;
+        height: 1px;
+        left: 0%;
+        top: 0%;
+        right: 0%;
+        bottom: auto;
+        margin-left: 30px;
+    }
+
     .footer-top-wrapper-style-three{
         display: flex;
         align-items: center;
