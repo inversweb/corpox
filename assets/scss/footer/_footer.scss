@@ -243,3 +243,178 @@
     background-position: top left 2000px;
   }
 }
+
+
+.tmp-footer-style-3{
+    .footer-top-wrapper-style-three{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .left{
+            flex-basis: 50%;
+
+            .tmp-badge-text{
+                padding: 15px 20px;
+                border: 1px solid var(--color-border);
+                margin: 0;
+                margin-bottom: 20px;
+                display: block;
+                max-width: max-content;
+                color: var(--color-white);
+                border-radius: 6px;
+            }
+        }
+        .right{
+            .tmp-btn{
+                margin: auto;
+                margin-bottom: 20px;
+            }
+            .tmp-text-white{
+                color: var(--color-white);
+            }
+        }
+    }
+}
+
+.tmp-separator{
+    display: block;
+    height: 1px;
+    width: 100%;
+    background: var(--color-border);
+}
+
+.tmp-footer-card-3{
+    background: var(--color-border);
+    padding: 59px 40px;
+    border-radius: 10px;
+    &::after{
+        background: var(--color-primary);
+        inset: 10px;
+    }
+    .tmp-footer-widget{
+        .tmp-logo{
+            max-width: 140px;
+        }
+        .tmp-newsletter-form{
+            position: relative;
+            input{
+                height: 55px;
+                padding-right: 115px;
+                border:1px solid var(--color-body);
+                color: #fff;
+            }
+            button{
+                position: absolute;
+                right: 0;
+                top: 0;
+                height: 55px;
+                padding: 15px !important;
+                font-size: 14px;
+                background: var(--color-white);
+                color: var(--color-primary);
+                font-weight: 600;
+                &:hover{
+                    transform: none;
+                    color: #fff;
+                    &::after{
+                        background: var(--color-card);
+                    }
+                }
+            }
+        }
+    }
+}
+.tmp-list-footer{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    li{
+        margin: 0 0 15px -10px;
+        overflow: hidden;
+        position: relative;
+        display: flex;
+        gap: 20px;
+        align-items: center;
+        a{
+            padding-left: 20px;
+        }
+        svg{
+            position: absolute;
+            top: 23px;
+            left: -1%;
+            transform: translateY(0) translateX(-6px);
+            transition: .4s;
+            opacity: 0;
+        }
+        &::before{
+            content: "";
+            display: inline-block;
+            width: 6px;
+            height: 6px;
+            background: var(--color-body);
+            border-radius: 50%;
+            position: absolute;
+            top: 12px;
+            transform: translateX(6px) translateY(0);
+            transition: .4s;
+        }
+        &:hover{
+            &::before{
+                    transform: translateX(14px) translateY(-8px);
+    opacity: 0;
+            }
+            svg{
+                color: var(--color-primary);
+                transform: translateY(-13px) translateX(4px);
+                opacity: 1;
+            }
+        }
+    }
+}
+
+.tmp-copyright-area-3{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 0;
+    .tmp-social{
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        li{
+            margin: 0;
+        }
+    }
+}
+
+.b4-style{
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.tmp-hover-underline {
+    position: relative;
+    transition: .4s;
+    &::after {
+        position: absolute;
+        content: "";
+        left: auto;
+        bottom: 0;
+        background: currentColor;
+        width: 0;
+        height: 2px;
+        transition: 0.3s;
+        right: 0;
+    }
+
+    &:hover {
+        &::after {
+            width: 100%;
+            left: 0;
+            right: auto;
+        }
+    }
+}

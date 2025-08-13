@@ -16,18 +16,17 @@
         },
         
         methods: function (e) {
+            invJs.backtotopLeft();
             invJs.autoslidertab();
             invJs.odoMeter();
             invJs.portfoliobounceAnimation();
             invJs.preloader();
             invJs.masonryActivation();
-            invJs.backToTopInit();
             invJs.counterUpActivation();
             invJs.wowActivation();
             invJs.headerTopActivation();
             invJs.headerSticky();
             invJs.salActive();
-            invJs.popupMobileMenu();
             invJs.magnifyPopup();
             invJs.slickSliderActivation();
             invJs.radialProgress();
@@ -45,6 +44,48 @@
             invJs.lightBoxJs();
             invJs.imageSlideGsap();
             invJs.preloaderWithBannerActivation();
+        },
+
+        backtotopLeft: function () {
+          jQuery(function ($) {
+
+              var scrollTrigger = 100; // show করার জন্য স্ক্রল ট্রিগার
+              var shown = false;
+
+              function backToTopHandler() {
+                  var scrollTop = $(window).scrollTop();
+
+                  // Show / Hide elements
+                  if (scrollTop > scrollTrigger && !shown) {
+                      $('.show-on-scroll').addClass('show').removeClass('hide');
+                      shown = true;
+                  }
+                  if (scrollTop <= scrollTrigger && shown) {
+                      $('.show-on-scroll').addClass('hide').removeClass('show');
+                      shown = false;
+                  }
+
+                  // Scroll progress (max height = 100px)
+                  var pageHeight = $(document).height() - $(window).height();
+                  var progress = (scrollTop / pageHeight) * 100; // % progress
+                  var maxHeight = 100; // px
+                  var barHeight = (progress / 100) * maxHeight;
+
+                  $(".scrollbar-v").css("height", barHeight + "px");
+              }
+
+              // Scroll to top click
+              $('.float-text a').on('click', function (e) {
+                  e.preventDefault();
+                  $('html, body').stop(true).animate({ scrollTop: 0 }, 700);
+              });
+
+              // Scroll listener
+              $(window).on('scroll', backToTopHandler);
+
+          });
+
+
         },
 
         autoslidertab: function () {
@@ -217,7 +258,6 @@
 
         initOtherAnimations: function() {
           // Initialize all other animations that don't depend
-          invJs.backToTopInit();
           invJs.wowActivation();
           // all other animations except masonry
         },
@@ -265,14 +305,7 @@
             });
         },
         
-        popupMobileMenu: function (e) {
-            $('.demo-switcher-btn').on('click', function (e) {
-                $('.demo-presentation-wrapper').addClass('active');
-            });
-            $('.button-close-wrapper').on('click', function (e) {
-                $('.demo-presentation-wrapper').removeClass('active');
-            });
-        },
+
         
 
         slickSliderActivation: function () {
@@ -455,25 +488,6 @@
             sal({
                 threshold: 0.01,
                 once: true,
-            });
-        },
-
-        backToTopInit: function () {
-            var scrollTop = $('.tmp-back-top');
-            $(window).scroll(function () {
-                var topPos = $(this).scrollTop();
-                if (topPos > 150) {
-                    $(scrollTop).css('opacity', '1');
-                } else {
-                    $(scrollTop).css('opacity', '0');
-                }
-            });
-            $(scrollTop).on('click', function () {
-                $('html, body').animate({
-                    scrollTop: 0,
-                    easingType: 'linear',
-                }, 500);
-                return false;
             });
         },
 
@@ -770,15 +784,16 @@
             });
         },
         animationOnHover: function () {
-            let cards = document.querySelectorAll('.tmponhover');
-            cards.forEach((tmpOnHover) => {
-              tmpOnHover.onmousemove = function (e) {
-                let x = e.pageX - tmpOnHover.offsetLeft;
-                let y = e.pageY - tmpOnHover.offsetTop;
-                tmpOnHover.style.setProperty('--x', x + 'px');
-                tmpOnHover.style.setProperty('--y', y + 'px');
-              };
-            });
+let cards = document.querySelectorAll('.tmponhover');
+cards.forEach((tmpOnHover) => {
+  tmpOnHover.onmousemove = function (e) {
+    let rect = tmpOnHover.getBoundingClientRect();
+    let x = e.clientX - rect.left; // element এর ভিতরে X position
+    let y = e.clientY - rect.top;  // element এর ভিতরে Y position
+    tmpOnHover.style.setProperty('--x', `${x}px`);
+    tmpOnHover.style.setProperty('--y', `${y}px`);
+  };
+});
         },
 
         jaraLux: function (e) {
