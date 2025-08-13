@@ -536,6 +536,31 @@
     }
 }
 
-
+.over-gradient-primary{
+    position: relative;
+    border-radius: 8px;
+    &::before{
+        content: '';
+        position: absolute;
+        left: 0;
+        width: 100%;
+        top: 0;
+        bottom: 0;
+        height: 100%;
+        background: linear-gradient(45deg,rgba(82, 55, 249, 1) 0%, rgba(237, 221, 83, 0) 100%);
+    }
+    .tmp-btn{
+        position: absolute;
+        left: 50%;
+        bottom: 60px;
+        transform: translateX(-50%);
+        background: var(--color-white);
+        color: var(--color-card);
+        font-weight: 600;
+        &:hover{
+            color: var(--color-white);
+        }
+    }
+}
 
 
