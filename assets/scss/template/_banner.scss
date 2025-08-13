@@ -2086,5 +2086,15 @@ body {
         overflow: hidden;
         width: 300px;
     }
+
+}
+.tmp-banner-right-carousel{
+    position: relative;
+    .line-effect{
+        width: 100% !important;
+        height: 100% !important;
+        gap: 30px;
+        display: none;
+    }
 }
 

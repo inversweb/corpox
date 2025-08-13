@@ -802,4 +802,14 @@ textarea:-ms-input-placeholder {
     background: var(--color-card) !important;
 }
 
+@for $i from 1 through 100 {
+  [data-tmp-position-vertical="#{$i}"] {
+    top: #{$i * 1%};
+  }
+}
 
+@for $i from 1 through 100 {
+  [data-tmp-position-horigental="#{$i}"] {
+    left: #{$i * 1%};
+  }
+}
