@@ -979,21 +979,24 @@
                     </div>
                 </div>
                 <div class="row g-5">
-                    <div class="col-lg-5">
-                        <div class="thumbnail" data-sal="slide-right" data-sal-duration="800">
-                            <img class="w-100 radius" src="assets/images/about/about-5.png" alt="About Images">
+
+                    <div class="col-lg-5 mt_md--30 mt_sm--30">
+                        <div class="aapoiment-left-area-thumbnail">
+                            <img src="assets/images/appoinment/01.webp" alt="appoinment">
                         </div>
                     </div>
                     <div class="col-lg-7">
-                        <form class="contact-form-1 tmp-dynamic-form" id="contact-form" method="POST" action="mail.php">
-                            <div class="form-group">
-                                <input type="text" name="contact-name" id="contact-name" placeholder="Your Name">
+                        <form class="contact-form-1 appoinment-form-wrapper tmponhover tmp-dynamic-form" id="contact-form" method="POST" action="mail.php">
+                            <div class="form-group-wrapper">
+                                <div class="form-group">
+                                    <input type="text" name="contact-name" id="contact-name" placeholder="Your Name" required>
+                                </div>
+                                <div class="form-group">
+                                    <input type="tel" name="contact-phone" id="contact-phone" placeholder="Phone Number">
+                                </div>
                             </div>
                             <div class="form-group">
-                                <input type="text" name="contact-phone" id="contact-phone" placeholder="Phone Number">
-                            </div>
-                            <div class="form-group">
-                                <input type="email" id="contact-email" name="contact-email" placeholder="Your Email">
+                                <input type="email" id="contact-email" name="contact-email" placeholder="Your Email" required>
                             </div>
 
                             <div class="form-group">
@@ -1005,7 +1008,7 @@
                             </div>
 
                             <div class="form-group">
-                                <button name="submit" type="submit" id="submit" class=" btn-default btn-large tmp-btn w-100">
+                                <button name="submit" type="submit" id="submit" class="btn-default btn-large tmp-btn" style="width: 100%;">
                                     <span>Submit Now</span>
                                 </button>
                             </div>
