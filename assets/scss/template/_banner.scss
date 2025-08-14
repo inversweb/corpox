@@ -1555,11 +1555,16 @@ body {
     display: flex;
     align-items: center;
     height: 950px;
-    background-image: url(../images/bg/banner-finance.jpg);
+    background-image: url(../images/bg/01.webp);
 }
 
 .banner-finance-wrapper{
-    padding-top: 100px;
+    margin-top: 20px;
+    padding: 45px;
+    background-color: var(--color-card);
+    border-left:10px solid var(--color-primary);
+    max-width: max-content;
+    border-radius: 6px;
     .title{
         font-size: 70px;
         font-weight: 600;
@@ -1569,11 +1574,10 @@ body {
     }
     p{
         margin-bottom: 50px;
-        max-width: 70%;
-        margin: auto;
+        max-width: 100%;
+        color: #fff;
     }
     .tmp-btn{
-        margin: auto;
         margin-top: 50px;
     }
 }
@@ -2098,3 +2102,10 @@ body {
     }
 }
 
+.header-finance{
+    position: relative;
+}
+
+.financial-page-wrapper{
+    padding: 0 35px;
+}
