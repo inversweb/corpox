@@ -524,3 +524,129 @@
         }
     }
 }
+
+// modern case studiens
+.single-modern-case-studies{
+    position: relative;
+    display: block;
+    overflow: hidden;
+    border-radius: 6px;
+    .thumbnail{
+        img{
+            transition: .5s;
+        }
+    }
+    .inner-content-area{
+        position: absolute;
+        bottom: -70px;
+        left: 30px;
+        transition: .5s;
+        .tags{
+            background: #1b1b1c21;
+            border: 1px solid rgb(88 88 88 / 30%);
+            backdrop-filter: blur(3px);
+            color: var(--color-white);
+            padding: 10px 15px;
+            border-radius: 8px;
+            display: block;
+            max-width: max-content;
+            margin-bottom: 20px;
+        }
+        a{
+            background: var(--color-card);
+            border-radius: 8px;
+            padding: 10px 10px 10px 22px;
+            display: flex;
+            gap: 15px;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 460px;
+            min-width: 355px;
+            opacity: 0;
+            transition: .5s;
+            .title{
+                margin-bottom: 0;
+                font-size: 24px;
+            }
+            .tmp-icon{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 50px;
+                width: 50px;
+                background: #fff;
+                border-radius: 50%;
+                position: relative;
+                overflow: hidden;
+                span{
+                    display: inline-block;
+                    padding: 5px 10px;
+                    overflow: hidden;
+                    svg{
+                        path{
+                            transition-delay: .1s;
+                        }
+                    }
+                }
+                &::after{
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    width: 100%;
+                    height: 100%;
+                    background: #fff;
+                    border-radius: 50%;
+                    transform: scale(0.8);
+                    opacity: 0;
+                    transition: .5s;
+                }
+            }
+            &:hover{
+                .tmp-icon{
+                    background: var(--color-primary);
+                }
+                svg{
+                    animation: arrowUpDown 0.3s linear;
+                    path{
+                        fill: #fff;
+                    }
+                }
+            }
+        }
+    }
+    &:hover{
+        .inner-content-area{
+            bottom: 30px; 
+            a{
+                opacity: 1;
+            }             
+        }
+        .thumbnail{
+            img{
+                transform: scale(1.1);
+            }
+        }
+    }
+}
+
+@keyframes arrowUpDown {
+  0% {
+    transform: translate(0);
+  }
+
+  40% {
+    opacity: 0;
+    transform: translate(17px, -20px);
+  }
+
+  60% {
+    opacity: 0;
+    transform: translate(-19px, 18px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}

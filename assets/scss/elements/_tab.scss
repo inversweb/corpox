@@ -16,7 +16,7 @@
             margin: 0;
             .nav-link {
                 color: var(--color-white);
-                padding: 24px 44px;
+                padding: 15px 44px;
                 margin-bottom: -2px;
                 outline: none;
                 border: 0 none;
@@ -30,7 +30,7 @@
                     padding: 24px 20px;
                 }
                 &.active {
-                    background: var(--color-card);
+                    background: var(--color-primary);
                     border-color: transparent;
                 }
 
@@ -64,7 +64,7 @@
 
     &.style-two {
         .tab-button {
-            margin-bottom: 30px;
+            margin-bottom: 20px;
             .tabs__tab {
                 button {
                     border-radius: var(--radius-small);
