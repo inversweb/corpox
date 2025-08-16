@@ -1633,6 +1633,40 @@ body {
     display: block !important;
     position: relative;
     height: 642px !important;
+    .absolute-rating-area {
+        position: absolute;
+        left: -20%;
+        padding: 20px 32px;
+        background: var(--color-card);
+        border-radius: 6px;
+        bottom: 9%;
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+
+        img {
+            margin-bottom: 15px;
+        }
+
+        .stars-area {
+            display: flex;
+            align-items: center;
+            gap: 7px;
+            margin-bottom: 10px;
+            img{
+                max-width: 20px;
+                margin-bottom: 0;
+            }
+        }
+
+        p {
+            font-size: 18px;
+            color: var(--color-white);
+            font-weight: 500;
+            margin-bottom: 0;
+        }
+    }
     &::after{
         position: absolute;
         top: -5%;
