@@ -47,6 +47,19 @@
 }
 
 
+main.business-coatch{
+    .thumbnail-banner-business-coatch img,
+    .banner-coatch-right-image::after,
+    .invers-anime,
+    .single-modern-case-studies .thumbnail,
+    .team-style-two .inner .thumbnail {
+        border-radius: 5px !important;
+        clip-path: polygon(0% 0%, 0% 0%, 11.242% 1.171%, 21.54% 2.084%, 31.146% 2.74%, 40.31% 3.136%, 49.281% 3.271%, 58.309% 3.145%, 67.645% 2.756%, 77.539% 2.103%, 88.241% 1.185%, 100% 0%, 100% 100%, 0% 100%, 0% 0%);
+    }
+    .single-modern-case-studies .thumbnail{
+        display: block;
+    }
+}
 
 
 
