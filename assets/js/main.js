@@ -218,13 +218,13 @@
 
         preloader: function () {
 
-          // var preload = $("#inverweb-load");
+          var preload = $("#inverweb-load");
 
-          // if (preload.length) {
-          //   window.addEventListener('load', function () {
-          //     document.querySelector('#inverweb-load').classList.add("loaded");
-          //   });
-          // };
+          if (preload.length) {
+            window.addEventListener('load', function () {
+              document.querySelector('#inverweb-load').classList.add("loaded");
+            });
+          };
 
         },
         
