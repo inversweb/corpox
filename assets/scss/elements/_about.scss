@@ -5,6 +5,18 @@
     .title {
         font-weight: 400;
         margin-bottom: 35px;
+        @media #{$laptop-device} {
+            font-size: 26px;
+        }
+        @media #{$smlg-device} {
+            font-size: 26px;
+        }
+        @media #{$large-mobile} {
+            font-size: 16px;
+        }
+        @media #{$small-mobile} {
+            font-size: 16px;
+        }
         strong {
             color: var(--color-primary);
         }
@@ -41,6 +53,9 @@
                     margin-bottom: 20px;
                     max-width: 80%;
                     margin-top: 13px;
+                    @media #{$large-mobile} {
+                        max-width: 100%;
+                    }
                 }
             }
         }
@@ -49,7 +64,9 @@
 
 
 // About Styles 5 
-
+.why-choose-thumb.about-relative-thumb {
+    position: relative;
+}
 .about-style-5 {
     position: relative;
     z-index: 2;
@@ -176,18 +193,26 @@
     gap: 30px;
     margin-left: -70px;
     position: relative;
+    @media #{$mdsm-layout} {
+        margin-left: 0;
+    }
     .progress-circle-main-wrapper {
         display: flex;
         align-items: center;
         justify-content: space-between;
+        
+        position: absolute;
+        left: 50%;
+        bottom: 25%;
         .progress-area-wrapper {
-            position: absolute;
-            left: 50%;
-            bottom: 25%;
+
             background: var(--color-card) !important;
             padding: 28px 25px;
             border-radius: 10px;
             transform: translateX(-40%);
+            @media #{$large-mobile} {
+                padding: 15px;
+            }
             svg{
                 text{
                     color: #fff;
@@ -196,6 +221,9 @@
             .title{
                 margin-bottom: 0;
                 margin-top: 20px;
+                @media #{$large-mobile} {
+                    margin-top: 5px;
+                }
             }
         }
     }
@@ -203,4 +231,85 @@
 
 .tmp-about-area-fluid{
     background: var(--color-card);
+}
+
+.about-relative-thumb{
+    .absolute-rating-area {
+            position: absolute;
+            left: -10%;
+            padding: 20px 32px;
+            background: var(--color-card);
+            border-radius: 6px;
+            bottom: 9%;
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            right: auto !important;
+            border: 1px solid var(--color-border);
+            @media #{$smlg-device} {
+                left: 15%;
+            }
+            @media #{$mdsm-layout} {
+                left: 0%;
+            }
+            @media #{$sm-layout} {
+                left: 55px;
+            }
+            @media #{$large-mobile} {
+                padding: 5px 16px;
+                bottom: 10px;
+            }
+            img {
+                margin-bottom: 15px;
+            }
+            .profile-share{
+                a{
+                    img{
+                        max-width: 45px;
+                    }
+                }
+            }
+            .stars-area {
+                display: flex;
+                align-items: center;
+                gap: 7px;
+                margin-bottom: 10px;
+                img{
+                    max-width: 20px;
+                    margin-bottom: 0;
+                }
+            }
+
+            p {
+                font-size: 18px;
+                color: var(--color-white);
+                font-weight: 500;
+                margin-bottom: 0;
+            }
+    }
+}
+
+.sticky-about-top{
+    position: sticky;
+    top: 60px;
+    @media #{$smlg-device} {
+        position: relative;
+        top: 0;
+    }
+}
+.why-choose-thumb.about-relative-thumb{
+    .absolute-rating-area{
+        left: 37%;
+        right: 0;
+    }
+}
+
+.about-business-8{
+    @media #{$laptop-device} {
+        padding: 50px 0;
+    }
+    @media #{$smlg-device} {
+        padding: 50px 0;
+    }
 }

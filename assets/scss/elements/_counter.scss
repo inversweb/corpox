@@ -167,6 +167,10 @@
     background-color: var(--color-card);
     width: 100%;
     border-radius: 5px;
+    padding: 22px 18px;
+    @media #{$smlg-device} {
+        padding: 22px 18px;
+    }
 }
 
 

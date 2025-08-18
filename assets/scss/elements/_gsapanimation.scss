@@ -65,6 +65,15 @@
         width: 500vw;
         min-width: max-content;
         background-blend-mode: exclusion;
+        @media #{$smlg-device} {
+            font-size: 120px;
+        }
+        @media #{$mdsm-layout} {
+            font-size: 80px;
+        }
+        @media #{$sm-layout} {
+            font-size: 60px;
+        }
         span{
             -webkit-text-fill-color: transparent;
             -webkit-text-stroke: 1px;

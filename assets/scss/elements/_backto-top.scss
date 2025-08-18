@@ -34,6 +34,9 @@
   min-height: 0%;
   z-index:1000;
   cursor: pointer;
+    @media #{$sm-layout} {
+      right: 30px;
+    }
 }
 
 .scrollbar-v:before{
@@ -69,6 +72,9 @@
     right: 38px;
     transform: translate(-50%, -50%);
     font-weight: 500;
+    @media #{$sm-layout} {
+      right: 8px;
+    }
 }
 
 .float-text a{

@@ -367,7 +367,9 @@ Timeline Area
         z-index: 2;
         margin-bottom: 25px;
         border-radius: 10px;
-
+        @media #{$mdsm-layout} {
+            width: 100%;
+        }
         &.active {
             .working-steps-area-tabs {
                 background: var(--color-primary);
@@ -410,9 +412,11 @@ Timeline Area
     &:hover{
         transform: translateY(-5px);
     }
-    @media #{$smlg-device} {
+    @media #{$mdsm-layout} {
         flex-direction: column;
         align-items: flex-start;
+        align-items: flex-start;
+        padding: 25px;
     }
 
     @media #{$large-mobile} {
@@ -430,6 +434,11 @@ Timeline Area
         font-weight: 700;
         font-size: 30px;
         color: #20282D;
+        @media #{$sm-layout} {
+            height: 40px;
+            min-width: 40px;
+            font-size: 22px;
+        }
     }
 
     .inner-content {

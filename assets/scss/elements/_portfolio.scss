@@ -490,6 +490,10 @@
 .g-75 {
     --bs-gutter-x: 75px;
     --bs-gutter-y: 75px;
+    @media #{$mdsm-layout} {
+        --bs-gutter-x: 25px;
+        --bs-gutter-y: 25px;
+    }
 }
 
 .single-project-area-bottom-content{

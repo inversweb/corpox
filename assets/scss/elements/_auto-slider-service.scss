@@ -3,6 +3,15 @@
     padding: 80px;
     background: var(--color-card);
     border-radius: 8px;
+    @media #{$smlg-device} {
+        padding: 50px;
+    }
+    @media #{$mdsm-layout} {
+        padding: 30px;
+    }
+    @media #{$large-mobile} {
+        padding: 20px;
+    }
     .advance-tab-button{
         ul{
             li{

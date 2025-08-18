@@ -169,6 +169,12 @@
         position: absolute;
         left: 210px;
         top: -24px;
+        @media #{$sm-layout} {
+            left: 20px;            
+        }
+        @media #{$large-mobile} {
+            display: none;
+        }
     }
 }
 

@@ -41,6 +41,8 @@
     .more-author-text {
         margin: 10px;
         margin-left: 20px;
+        position: relative;
+        z-index: 10;
         .total-join-students {
             margin-bottom: 4px;
             font-size: 18px;
