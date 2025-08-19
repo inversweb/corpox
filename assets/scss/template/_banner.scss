@@ -1196,7 +1196,7 @@
             padding-top: 50px;
         }
         .title {
-            margin-bottom: 25px;
+            margin-bottom: 10px;
             display: inline-block;
             font-size: 50px;
             font-weight: 700;
@@ -1222,7 +1222,7 @@
             font-weight: 400;
             color: var(--color-body);
             width: 100%;
-            margin-top: 30px;
+            margin-top: 0;
             line-height: 1.6;
             font-size: 18px;
             @media #{$md-layout} {
@@ -1234,6 +1234,9 @@
         }
         .pres-line-separator-wrapper{
             margin-top: 60px;
+            @media #{$mdsm-layout} {
+                margin-top: 0;
+            }
         }
     }
 
@@ -1284,6 +1287,9 @@
 
         &:hover {
             transform: translateX(-30px);
+            @media #{$sm-layout} {
+                transform: none;
+            }
         }
     }
 }
@@ -1569,6 +1575,20 @@ body {
     align-items: center;
     height: 850px;
     background-image: url(../images/bg/01.webp);
+    @media #{$mdsm-layout} {
+        height: 690px;
+    }
+    @media #{$large-mobile} {
+        height: 490px;
+    }
+}
+
+.section-title .title{
+    @media #{$smlg-device} {
+        br{
+            display: none;
+        }
+    }
 }
 
 .banner-finance-wrapper{
@@ -1578,12 +1598,21 @@ body {
     border-left:10px solid var(--color-primary);
     max-width: max-content;
     border-radius: 6px;
+    @media #{$large-mobile} {
+        padding: 15px;
+    }
     .title{
         font-size: 70px;
         font-weight: 600;
         margin-bottom: 15px;
         line-height: 1.3;
         margin-top: 10px;
+        @media #{$large-mobile} {
+            font-size: 40px;
+        }
+        @media #{$small-mobile} {
+            font-size: 36px;
+        }
     }
     p{
         margin-bottom: 0;
@@ -1599,6 +1628,12 @@ body {
     position: relative;
     height: 850px;
     background-image: url(../images/bg/finance-large.jpg);
+    @media #{$sm-layout} {
+        height: 600px;
+    }
+    @media #{$large-mobile} {
+        height: 400px;
+    }
     .tmp-btn.rounded-player {
         border-radius: 100%;
         width: 100px;
@@ -1621,6 +1656,9 @@ body {
     display: flex;
     align-items: center;
     padding-top: 75px;
+    @media #{$mdsm-layout} {
+        height: auto;
+    }
 }
 
 .banner-business-coatch-wrapper{
@@ -1628,15 +1666,30 @@ body {
         margin-top: 15px;
         margin-bottom: 30px;
         font-size: 70px;
+        @media #{$smlg-device} {
+            font-size: 54px;
+        }
+        @media #{$sm-layout} {
+            font-size: 44px;
+        }
+        @media #{$large-mobile} {
+            font-size: 32px;
+        }
     }
     p{
         margin-bottom: 40px;
         max-width: 85%;
+        @media #{$sm-layout} {
+            max-width: 100%;
+        }
     }
 }
 
 .thumbnail-banner-business-coatch{
     height: 642px !important;
+    @media #{$mdsm-layout} {
+        height: auto !important;
+    }
     img{
         border-radius: 5px !important;
     }
@@ -1646,6 +1699,9 @@ body {
     display: block !important;
     position: relative;
     height: 642px !important;
+        @media #{$mdsm-layout} {
+        height: auto !important;
+    }
     .absolute-rating-area {
         position: absolute;
         left: -20%;
@@ -1657,7 +1713,9 @@ body {
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
-
+        @media #{$mdsm-layout} {
+            left: 51px;
+        }
         img {
             margin-bottom: 15px;
         }
@@ -1706,7 +1764,7 @@ body {
 
 // banner realstate
 .tmp-banner-area-realstate-one{
-    height: 850px;
+    height: 950px;
     display: flex;
     align-items: center;
     position: relative;
@@ -1716,18 +1774,21 @@ body {
         width: 100%;
         height: 100%;
         z-index: -1;
+        clip-path: polygon( 0% 0%,0% 0%,11.499% 0%,22.022% 0%,31.809% 0%,41.102% 0%,50.142% 0%,59.171% 0%,68.43% 0%,78.16% 0%,88.603% 0%,100% 0%,100% 100%,100% 100%,86.685% 95.4%,75.613% 91.823%,66.218% 89.267%,57.938% 87.734%,50.205% 87.223%,42.456% 87.734%,34.126% 89.267%,24.65% 91.823%,13.463% 95.4%,0% 100%,0% 0% );
         video{
             position: absolute;
             width: 100%;
             height: 100%;
             object-fit: cover;
-            opacity: .1;
+            opacity: 1;
+            clip-path: none;
         }
     }
     .realstate-banner-style-one{
         text-align: center;
         max-width: 75%;
         margin: auto;
+        margin-top: -120px;
         .title{
             font-size: 100px;
             margin-bottom: 30px;
@@ -1737,10 +1798,13 @@ body {
                 font-weight: 700;
             }
         }
+        p{
+            color: var(--color-white);
+        }
     }
 }
-.mt-dec-150{
-    margin-top: -150px;
+.mt-dec-250{
+    margin-top: -250px;
 }
 
 .tmp-gallery{
@@ -2135,11 +2199,29 @@ body {
 
 .tmp-modern-slider .banner-content-9{
     .title{
-        font-size: 80px;
+        font-size: 60px;
         line-height: 1.4;
+        @media #{$smlg-device} {
+            font-size: 54px;
+        }
+        @media #{$large-mobile} {
+            font-size: 42px;
+        }
+        @media #{$small-mobile} {
+            font-size: 34px;
+        }
         span{
             color: var(--color-primary);
-            font-size: 80px;
+            font-size: 66px;
+            @media #{$smlg-device} {
+                font-size: 60px;
+            }
+            @media #{$large-mobile} {
+                font-size: 42px;
+            }
+            @media #{$small-mobile} {
+                font-size: 34px;
+            }
         }
     }
     .pres-line-separator-wrapper{
@@ -2167,6 +2249,15 @@ body {
 
 .banner-right-picking-image{
     position: relative;
+    @media #{$laptop-device} {
+        margin-right: 20px;
+    }
+    @media #{$mdsm-layout} {
+        margin-right: 60px;
+    }
+    @media #{$large-mobile} {
+        margin-right: 0;
+    }
     .right-image-absolute{
         position: absolute;
         right: -132px;
@@ -2174,6 +2265,9 @@ body {
         bottom: 0;
         top: 10%;
         max-width: 171px;
+        @media #{$large-mobile} {
+            display: none;
+        }
     }
     .blocksync-stars-area {
         height: 800px;
@@ -2198,4 +2292,7 @@ body {
 
 .financial-page-wrapper{
     padding: 0 35px;
+    @media #{$sm-layout} {
+        padding: 0 0;
+    }
 }

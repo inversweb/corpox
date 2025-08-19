@@ -274,9 +274,14 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+        @media #{$mdsm-layout} {
+            flex-wrap: wrap;
+        }
         .left{
             flex-basis: 50%;
-
+            @media #{$mdsm-layout} {
+                flex-basis: 100%;
+            }
             .tmp-badge-text{
                 padding: 15px 20px;
                 border: 1px solid var(--color-border);
@@ -289,6 +294,16 @@
             }
         }
         .right{
+            @media #{$mdsm-layout} {
+                flex-basis: 100%;
+                .right-text-area{
+                    text-align: left !important;
+                    .tmp-btn{
+                        margin: 0;
+                        margin-bottom: 25px;
+                    }
+                }
+            }
             .tmp-btn{
                 margin: auto;
                 margin-bottom: 20px;
@@ -311,6 +326,9 @@
     background: var(--color-border);
     padding: 59px 40px;
     border-radius: 10px;
+    @media #{$large-mobile} {
+        padding: 25px;
+    }
     &::after{
         background: var(--color-primary);
         inset: 10px;
