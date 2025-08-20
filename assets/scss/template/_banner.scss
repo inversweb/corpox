@@ -1769,6 +1769,12 @@ body {
     align-items: center;
     position: relative;
     z-index: 1;
+    @media #{$sm-layout} {
+        height: 700px;
+    }
+    @media #{$large-mobile} {
+        height: 700px;
+    }
     .large-video-playing{
         position: absolute;
         width: 100%;
@@ -1789,13 +1795,34 @@ body {
         max-width: 75%;
         margin: auto;
         margin-top: -120px;
+        @media #{$sm-layout} {
+            max-width: 100%;
+        }
         .title{
             font-size: 100px;
             margin-bottom: 30px;
             font-weight: 700;
+            @media #{$smlg-device} {
+                font-size: 80px;
+            }
+            @media #{$sm-layout} {
+                font-size: 64px;
+            }
+            @media #{$large-mobile} {
+                font-size: 44px;
+            }
             span{
                 color: var(--color-primary);
                 font-weight: 700;
+                @media #{$smlg-device} {
+                    font-size: 80px;
+                }
+                @media #{$sm-layout} {
+                    font-size: 64px;
+                }
+                @media #{$large-mobile} {
+                    font-size: 44px;
+                }
             }
         }
         p{
@@ -1819,9 +1846,16 @@ body {
     padding-left: 295px;
     .title{
         line-height: 1.4;
+       
         .large{
             color: #fff;
             font-size: 120px;
+             @media #{$extra-device} {
+                font-size: 90px;
+            }
+            @media #{$laptop-device} {
+                font-size: 90px;
+            }
         }
     }
     p{

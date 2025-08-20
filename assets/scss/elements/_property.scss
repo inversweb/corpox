@@ -6,17 +6,26 @@
     background: var(--color-card);
     position: sticky;
     top: 50px;
+    @media #{$mdsm-layout} {
+        position: relative;
+    }
 }
 .real-estate-demo{
-    overflow: visible;
+    overflow: visible !important;
 }
 .portfolio-list-thumbnail{
     height: 640px;
+    @media #{$smlg-device} {
+        height: auto;
+    }
 }
 .portfolio-list-inner-content{
     max-width: 90%;
     .title{
         font-size: 45px;
+        @media #{$smlg-device} {
+            font-size: 28px;
+        }
     }
     .tag-wrapper-area{
         display: flex;
@@ -88,5 +97,5 @@
 }
 
 .realstate-banner-style-two-thumbnail{
-    height: 950px;
+    height: auto;
 }

@@ -12,10 +12,10 @@
             font-size: 26px;
         }
         @media #{$large-mobile} {
-            font-size: 16px;
+            font-size: 26px;
         }
         @media #{$small-mobile} {
-            font-size: 16px;
+            font-size: 26px;
         }
         strong {
             color: var(--color-primary);
@@ -188,6 +188,9 @@
 
 .image-about-realstate{
     height: 742px;
+    @media #{$smlg-device} {
+        height: auto;
+    }
 }
 
 .about-13-thumbnail-left-wrapper{
@@ -322,6 +325,101 @@
         @media #{$laptop-device} {
             margin-left: 0;
             padding-right: 30px;            
+        }
+    }
+}
+
+.thumbnail-about-8{
+    position: relative;
+    .large-image{
+        overflow: hidden;
+        border-radius: 8px;
+        display: block;
+        margin-left: 40px;
+        @media #{$mdsm-layout} {
+            margin-left: 0;
+        }
+    }
+    img{
+        width: 100%;
+    }
+    .small-iamge-area{
+        position: absolute;
+        left: -40px;
+        right: auto !important;
+        bottom: 30px;
+        @media #{$sm-layout} {
+            left: 20px;
+            max-width: 250px;
+        }
+        .video-icon{
+            position: absolute;
+            content: "";
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            margin-top: 10px;
+            transition: 0.4s;
+        }
+    }
+}
+.about-wrapper-8{
+    max-width: 90%;
+    .tmp-list-item-half {
+        margin-top: 0;
+        padding-left: 0;
+        display: flex;
+        flex-flow: row wrap;
+            @media #{$sm-layout} {
+                flex-wrap: wrap;
+            }
+        li {
+            width: 50%;
+            float: left;
+            list-style: none;
+            display: flex;
+            align-items: center;
+            padding-right: 20px;
+                @media #{$sm-layout} {
+                    width: 100%;
+                }
+            img {
+                max-width: 50px;
+                margin-right: 10px;
+            }
+            .icon {
+                font-size: 20px;
+                margin-right: 15px;
+                height: 45px;
+                width: 45px;
+                line-height: 45px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex: 0 0 45px;
+                border-radius: 0%;
+                background: var(--color-primary);
+                padding: 10px;
+                border-radius: 50%;
+                path{
+                    fill: var(--color-white);
+                }
+            }
+        }
+    }
+    .quote-area-about{
+        padding: 20px;
+        border-left: 4px solid;
+        border-color: var(--color-primary);
+        margin-bottom: 0;
+        margin-bottom: 40px;
+        position: relative;
+        z-index: 9;
+        border-radius: 6px;
+        max-width: max-content;
+        p{
+            margin: 0;
+            color: #fff;
         }
     }
 }

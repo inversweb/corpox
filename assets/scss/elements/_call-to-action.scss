@@ -141,6 +141,7 @@
                 z-index: 0;
                 width: max-content;
                 max-width: 420px;
+                pointer-events: none;
                 @media #{$mdsm-layout} {
                     max-width: 260px;
                 }
