@@ -313,8 +313,8 @@
         }
     }
     .image-area{
-        background: var(--color-primary);
-        height: 349px;
+        background: var(--color-border-3);
+        height: 344px;
         clip-path: polygon( 1.266% 2.801%,1.266% 2.801%,1.291% 2.529%,1.363% 2.27%,1.478% 2.029%,1.632% 1.809%,1.822% 1.613%,2.043% 1.445%,2.292% 1.308%,2.564% 1.206%,2.857% 1.142%,3.165% 1.12%,96.835% 1.12%,96.835% 1.12%,97.143% 1.142%,97.436% 1.206%,97.708% 1.308%,97.957% 1.445%,98.178% 1.613%,98.368% 1.809%,98.522% 2.029%,98.637% 2.27%,98.709% 2.529%,98.734% 2.801%,98.734% 96.957%,98.734% 96.957%,98.705% 97.255%,98.62% 97.534%,98.485% 97.791%,98.305% 98.022%,98.085% 98.223%,97.832% 98.388%,97.549% 98.515%,97.243% 98.6%,96.919% 98.637%,96.582% 98.623%,2.911% 87.451%,2.911% 87.451%,2.636% 87.4%,2.378% 87.316%,2.14% 87.201%,1.925% 87.059%,1.735% 86.892%,1.574% 86.703%,1.443% 86.495%,1.346% 86.271%,1.286% 86.034%,1.266% 85.785%,1.266% 2.801% );
         a{
             display: block;
@@ -369,18 +369,18 @@
                     width: 50px;
                     height: 50px;
                     line-height: 50px;
-                    background: var(--color-white);
+                    background: var(--color-primary);
                     border-radius: 50%;
                     text-align: center;
                     color: var(--color-heading);
                     font-size: 20px;
                     transition: .3s;
                     i{
-                        color: var(--color-primary);
+                        color: var(--color-white);
                         transition: .3s;
                     }
                     &:hover{
-                        background: var(--color-primary);
+                        background: var(--color-card);
                         color: var(--color-white);
                         i{
                             color: var(--color-white);

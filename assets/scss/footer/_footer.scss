@@ -225,8 +225,20 @@
 .footer-style-3{
     h2.title{
         font-size: 60px;
+        @media #{$mdsm-layout} {
+            font-size: 46px;
+        }
+        @media #{$large-mobile} {
+            font-size: 24px;
+        }
     }
 }
+
+
+.form-group.tmponhover{
+    border-radius: 6px;
+}
+
 
 .bg-line-animatoin-area-global{
     background-image: url(../images/bg/global-line.png);
@@ -461,6 +473,17 @@
             width: 100%;
             left: 0;
             right: auto;
+        }
+    }
+}
+
+.footer-message-and-form{
+    form{
+        .input-group{
+            border-radius: 4px;
+            &::after{
+                border-radius: 4px;
+            }
         }
     }
 }

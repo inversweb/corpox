@@ -250,6 +250,9 @@
     &.style-8 {
         padding: 100px 0;
         background: var(--color-card);
+        @media #{$large-mobile} {
+            padding: 50px 0;
+        }
         .content-wrapper {
             padding: 40px 0;
             border-bottom: 1px solid var(--color-border);
@@ -276,6 +279,9 @@
 
 .images-left-right-float{
     right: -110px !important;
+    @media #{$large-mobile} {
+        right: -223px !important;
+    }
 }
 
 .theme-shape {

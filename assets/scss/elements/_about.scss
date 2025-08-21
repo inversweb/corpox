@@ -193,7 +193,7 @@
     }
 }
 
-.about-13-thumbnail-left-wrapper{
+.about-2-thumbnail-left-wrapper{
     display: flex;
     align-items: flex-start;
     gap: 30px;
@@ -202,37 +202,48 @@
     @media #{$mdsm-layout} {
         margin-left: 0;
     }
-    .progress-circle-main-wrapper {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        
+    .single-thumbnail{
+        position: relative;
+        .video-icon{
+            position: absolute;
+            z-index: 1000;
+            right: 30px;
+            bottom: 30px;
+        }
+    }
+    .absolute-rating-area{
         position: absolute;
-        left: 50%;
+        left: 40%;
+        padding: 20px 32px;
+        background: var(--color-card);
+        border-radius: 6px;
         bottom: 25%;
-        .progress-area-wrapper {
-
-            background: var(--color-card) !important;
-            padding: 28px 25px;
-            border-radius: 10px;
-            transform: translateX(-40%);
-            @media #{$large-mobile} {
-                padding: 15px;
-            }
-            svg{
-                text{
-                    color: #fff;
-                }
-            }
-            .title{
-                margin-bottom: 0;
-                margin-top: 20px;
-                @media #{$large-mobile} {
-                    margin-top: 5px;
-                }
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        right: auto !important;
+        border: 1px solid var(--color-border);
+        p{
+            margin-bottom: 10px;
+            .odometer{
+                color: var(--color-primary);
+                font-weight: 600;
+                font-size: 18px;
             }
         }
     }
+    .stars-area {
+        display: flex;
+        align-items: center;
+        gap: 7px;
+        margin-bottom: 10px;
+        img{
+            max-width: 16px;
+            margin-bottom: 0;
+        }
+    }
+
 }
 
 .tmp-about-area-fluid{
@@ -241,58 +252,58 @@
 
 .about-relative-thumb{
     .absolute-rating-area {
-            position: absolute;
-            left: -10%;
-            padding: 20px 32px;
-            background: var(--color-card);
-            border-radius: 6px;
-            bottom: 9%;
-            text-align: left;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-            right: auto !important;
-            border: 1px solid var(--color-border);
-            @media #{$smlg-device} {
-                left: 15%;
-            }
-            @media #{$mdsm-layout} {
-                left: 0%;
-            }
-            @media #{$sm-layout} {
-                left: 55px;
-            }
-            @media #{$large-mobile} {
-                padding: 5px 16px;
-                bottom: 10px;
-            }
-            img {
-                margin-bottom: 15px;
-            }
-            .profile-share{
-                a{
-                    img{
-                        max-width: 45px;
-                    }
-                }
-            }
-            .stars-area {
-                display: flex;
-                align-items: center;
-                gap: 7px;
-                margin-bottom: 10px;
+        position: absolute;
+        left: -10%;
+        padding: 20px 32px;
+        background: var(--color-card);
+        border-radius: 6px;
+        bottom: 9%;
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        right: auto !important;
+        border: 1px solid var(--color-border);
+        @media #{$smlg-device} {
+            left: 15%;
+        }
+        @media #{$mdsm-layout} {
+            left: 0%;
+        }
+        @media #{$sm-layout} {
+            left: 55px;
+        }
+        @media #{$large-mobile} {
+            padding: 5px 16px;
+            bottom: 10px;
+        }
+        img {
+            margin-bottom: 15px;
+        }
+        .profile-share{
+            a{
                 img{
-                    max-width: 20px;
-                    margin-bottom: 0;
+                    max-width: 45px;
                 }
             }
-
-            p {
-                font-size: 18px;
-                color: var(--color-white);
-                font-weight: 500;
+        }
+        .stars-area {
+            display: flex;
+            align-items: center;
+            gap: 7px;
+            margin-bottom: 10px;
+            img{
+                max-width: 20px;
                 margin-bottom: 0;
             }
+        }
+
+        p {
+            font-size: 18px;
+            color: var(--color-white);
+            font-weight: 500;
+            margin-bottom: 0;
+        }
     }
 }
 
@@ -390,17 +401,16 @@
             .icon {
                 font-size: 20px;
                 margin-right: 15px;
-                height: 45px;
-                width: 45px;
+                height: 50px;
+                min-width: 50px;
                 line-height: 45px;
                 display: flex;
                 align-items: center;
                 justify-content: center;
                 flex: 0 0 45px;
-                border-radius: 0%;
                 background: var(--color-primary);
-                padding: 10px;
-                border-radius: 50%;
+                padding: 14px;
+                border-radius: 4px;
                 path{
                     fill: var(--color-white);
                 }
@@ -421,5 +431,13 @@
             margin: 0;
             color: #fff;
         }
+    }
+}
+
+.about-wrapper-8{
+    .odometer{
+        color: var(--color-primary);
+        margin: 0 3px;
+        font-weight: 600;
     }
 }

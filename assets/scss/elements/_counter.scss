@@ -12,6 +12,9 @@
         @media #{$large-mobile} {
             font-size: 45px;
         }
+        @media #{$mdsm-layout} {
+            font-size: 48px;
+        }
     }
     .title {
         font-size: 20px;

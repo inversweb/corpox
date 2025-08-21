@@ -19,7 +19,7 @@
                 width: 100%;
                 .tab-button{
                     padding: 23px 27px;
-                    background: rgba(0, 0, 0, 0.04);
+                    background: rgb(0 0 0 / 18%);
                     .tab{
                         display: flex;
                         align-items: flex-start;
@@ -37,7 +37,7 @@
                             justify-content: center;
                             border-radius: 50%;
                             background: transparent;
-                            border: 1px solid var(--color-white);
+                            border: 1px solid var(--color-border);
                             color: var(--color-white);
                             font-weight: 700;
                         }

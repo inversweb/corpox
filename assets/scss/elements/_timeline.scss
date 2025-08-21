@@ -375,7 +375,8 @@ Timeline Area
                 background: var(--color-primary);
 
                 .left-icon-number {
-                    color: var(--color-primary);
+                    font-size: 44px;
+                    color: var(--color-white);
                 }
 
                 .inner-content {
@@ -426,14 +427,14 @@ Timeline Area
     .left-icon-number {
         height: 80px;
         min-width: 80px;
-        background: #ffffff;
+        background: var(--color-primary);
         display: flex;
         align-items: center;
         justify-content: center;
         border-radius: 6px;
         font-weight: 700;
         font-size: 30px;
-        color: #20282D;
+        color: var(--color-white);
         @media #{$sm-layout} {
             height: 40px;
             min-width: 40px;

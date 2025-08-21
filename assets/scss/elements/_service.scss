@@ -501,18 +501,22 @@
         display: flex;
         align-items: center;
         background: var(--color-card);
-        border-radius: 100px;
+        border-radius: 6px;
         transition: all .3s;
         &.tmponhover {
             &::after{
-                border-radius: 100px;
+                border-radius: 6px;
             }
         }
         .content {
             .title {
                 margin: 0;
-                padding: 0 30px;
+                padding: 0 20px;
                 font-size: 24px;
+                color: var(--color-body);
+                font-weight: 400;
+                font-family: var(--font-primary);
+                letter-spacing: 0.5px;
 
                 @media #{$large-mobile} {
                     font-size: 18px;
@@ -524,7 +528,7 @@
             max-width: 94px;
             display: block;
             overflow: hidden;
-            border-radius: 50%;
+            border-radius: 6px;
 
             img {
                 transition: .6s;
