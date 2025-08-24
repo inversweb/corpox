@@ -459,7 +459,7 @@
 .tmp-badge-card {
     background-color: transparent;
     background: transparent;
-    padding: 1px 10px;
+    padding: 3px 10px;
     border-radius: 100px;
     color: #fff;
     font-size: 12px;
@@ -479,6 +479,12 @@
         z-index: -1;
         border-radius: 100px;
         opacity: 0.5;
+    }
+    &.success{
+        &::before{
+            background: var(--color-success);
+            opacity: 1;
+        }
     }
 }
 

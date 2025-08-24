@@ -26,7 +26,7 @@
 <body>
     <main class="page-wrapper">
         <!-- Start Header Area  -->
-        <header class="tmp-header header-default header-not-transparent header-sticky">
+        <header class="tmp-header header-default header-not-transparent header-sticky-smooth header-sticky">
             <div class="container position-relative">
                 <div class="row align-items-center row--0">
                     <div class="col-xl-2 col-lg-2 col-md-6 col-4">
@@ -85,7 +85,7 @@
                                                                 <a href="11-hr-website.html" class="thumbnail-demos">
                                                                     <img src="assets/images/demo/11-personal-portfolio.png" alt="">
                                                                 </a>
-                                                                <a href="11-hr-website.html">Personal Portfolio <span class="tmp-badge-card">Hot</span></a>
+                                                                <a href="11-hr-website.html">HR Website</a>
                                                             </li>
 
                                                             <li>
@@ -138,7 +138,7 @@
                                                                 <a href="14-financial-consulting.html" class="thumbnail-demos">
                                                                     <img src="assets/images/demo/14-financial-consulting.png" alt="">
                                                                 </a>
-                                                                <a href="14-financial-consulting.html">Financial Consulting</a>
+                                                                <a href="14-financial-consulting.html">Financial Consulting <span class="tmp-badge-card success">Hot</span></a>
                                                             </li>
 
 
@@ -380,7 +380,7 @@
                                                 <a href="11-hr-website.html" class="thumbnail-demos">
                                                     <img src="assets/images/demo/11-personal-portfolio.png" alt="">
                                                 </a>
-                                                <a href="11-hr-website.html">Personal Portfolio <span class="tmp-badge-card">Hot</span></a>
+                                                <a href="11-hr-website.html">HR Website</a>
                                             </li>
 
                                             <li>
@@ -433,7 +433,7 @@
                                                 <a href="14-financial-consulting.html" class="thumbnail-demos">
                                                     <img src="assets/images/demo/14-financial-consulting.png" alt="">
                                                 </a>
-                                                <a href="14-financial-consulting.html">Financial Consulting</a>
+                                                <a href="14-financial-consulting.html">Financial Consulting <span class="tmp-badge-card success">Hot</span></a>
                                             </li>
 
 
@@ -603,15 +603,15 @@
                     <div class="row">
                         <div class="col-lg-12">
                             <div class="tmp-section-title-border text-center">
-                                <div class="pres-line-separator-wrapper text-center mb--10 wow move-right">
+                                <div class="pres-line-separator-wrapper text-center mb--10">
                                     <div class="line-separator line-left"></div>
                                     <span class="subtitle">
                                         <span class="number"><a href="index.html">01</a></span>
-                                    <span class="subtitle-text">Contact Form</span>
+                                    <span class="subtitle-text">Contact With Us</span>
                                     </span>
                                     <div class="line-separator line-right"></div>
                                 </div>
-                                <h2 class="title w-700 mt--20 wow move-right">Our Contact <br /> <span class="theme-gradient">Address Here.</span></h2>
+                                <h2 class="title w-700 mt--20 tmp-title-split">Let's Contact With Us</h2>
                             </div>
                         </div>
                     </div>
@@ -620,7 +620,7 @@
                             <div class="tmp-contact-address mt_dec--30">
                                 <div class="row g-5">
                                     <div class="col-lg-4 col-md-6 col-12">
-                                        <div class="tmp-address">
+                                        <div class="tmp-address tmponhover">
                                             <div class="icon">
                                                 <i class="feather-headphones"></i>
                                             </div>
@@ -631,7 +631,7 @@
                                         </div>
                                     </div>
                                     <div class="col-lg-4 col-md-6 col-12">
-                                        <div class="tmp-address">
+                                        <div class="tmp-address tmponhover">
                                             <div class="icon">
                                                 <i class="feather-mail"></i>
                                             </div>
@@ -642,7 +642,7 @@
                                         </div>
                                     </div>
                                     <div class="col-lg-4 col-md-6 col-12">
-                                        <div class="tmp-address">
+                                        <div class="tmp-address tmponhover">
                                             <div class="icon">
                                                 <i class="feather-map-pin"></i>
                                             </div>
@@ -657,7 +657,7 @@
                         </div>
                     </div>
 
-                    <div class="row mt--60 mb--60">
+                    <div class="row mt--60">
                         <div class="col-lg-12">
                             <div class="tmp-profile-box">
                                 <div class="profile-share justify-content-center">
@@ -675,42 +675,53 @@
                         </div>
                     </div>
 
+                </div>
+            </div>
+
+
+            <!-- appoinment area start -->
+            <div class="inv-appoinment-area-start tmp-section-gapBottom">
+                <div class="container">
                     <div class="row g-5">
+
+                        <div class="col-lg-5">
+                            <div class="aapoiment-left-area-thumbnail">
+                                <img src="assets/images/appoinment/01.webp" alt="appoinment">
+                            </div>
+                        </div>
                         <div class="col-lg-7">
-                            <form class="contact-form-1 tmp-dynamic-form" id="contact-form" method="POST" action="mail.php">
-                                <div class="form-group">
-                                    <input type="text" name="contact-name" id="contact-name" placeholder="Your Name">
+                            <form class="contact-form-1 appoinment-form-wrapper tmponhover tmp-dynamic-form" id="contact-form" method="POST" action="mail.php">
+                                <div class="form-group-wrapper">
+                                    <div class="form-group tmponhover">
+                                        <input type="text" name="contact-name" id="contact-name" placeholder="Your Name" required>
+                                    </div>
+                                    <div class="form-group tmponhover">
+                                        <input type="tel" name="contact-phone" id="contact-phone" placeholder="Phone Number">
+                                    </div>
                                 </div>
-                                <div class="form-group">
-                                    <input type="text" name="contact-phone" id="contact-phone" placeholder="Phone Number">
-                                </div>
-                                <div class="form-group">
-                                    <input type="email" id="contact-email" name="contact-email" placeholder="Your Email">
+                                <div class="form-group tmponhover">
+                                    <input type="email" id="contact-email" name="contact-email" placeholder="Your Email" required>
                                 </div>
 
-                                <div class="form-group">
+                                <div class="form-group tmponhover">
                                     <input type="text" id="subject" name="subject" placeholder="Your Subject">
                                 </div>
 
-                                <div class="form-group">
+                                <div class="form-group tmponhover">
                                     <textarea name="contact-message" id="contact-message" placeholder="Your Message"></textarea>
                                 </div>
 
-                                <div class="form-group">
-                                    <button name="submit" type="submit" id="submit" class="btn-default btn-large tmp-btn">
+                                <div class="form-group tmponhover">
+                                    <button name="submit" type="submit" id="submit" class="btn-default btn-large tmp-btn" style="width: 100%;">
                                         <span>Submit Now</span>
                                     </button>
                                 </div>
                             </form>
                         </div>
-                        <div class="col-lg-5 mt_md--30 mt_sm--30">
-                            <div class="google-map-style-1">
-                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14554259.179133086!2d-105.54385245388013!3d37.49334218664659!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54eab584e432360b%3A0x1c3bb99243deb742!2sUnited%20States!5e0!3m2!1sen!2sbd!4v1630777307491!5m2!1sen!2sbd" width="600" height="550" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
+            <!-- appoinment area end -->
 
         </div>
         <!-- End Contact Area  -->
@@ -834,9 +845,6 @@
             <!-- End Copy Right Area  -->
             <div class="shape-area wow move-right" data-wow-offset="250">
                 <img src="assets/images/shape/02.png" alt="consulting_business">
-            </div>
-            <div class="shape-right-top wow toBottomLeft">
-                <img src="assets/images/shape/03.png" alt="consulting_business">
             </div>
         </footer>
         <!-- End Footer Area  -->
