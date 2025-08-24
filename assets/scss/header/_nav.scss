@@ -53,6 +53,10 @@
                     border-radius: 0 0 10px 10px;
                     background-color: var(--color-card);
                     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+
+                    transform: scaleY(0);
+                    clip: rect(0px, 200vw, 0, 0px);
+                    transform: translateZ(0);
                     li {
                         a {
                             font-weight: 500;
@@ -83,6 +87,9 @@
                         opacity: 1;
                         visibility: visible;
                         top: 100%;
+
+                        clip: rect(0px, 100vw, 200vh, -30px);
+                        transition: clip 0.6s linear, opacity 0.4s linear;
                     }
                 }
             }
@@ -92,7 +99,7 @@
                 .tmp-megamenu {
                     position: absolute;
                     transition: 0.3s;
-                    top: 90%;
+                    top: 100%;
                     width: 100%;
                     left: 0;
                     right: 0;
@@ -101,6 +108,9 @@
                     opacity: 0;
                     transform-origin: 0 0;
                     transform: scaleY(0);
+
+                    clip: rect(0px, 200vw, 0, 0px);
+                    transform: translateZ(0);
                     .wrapper {
                         border-radius: 0 0 10px 10px;
                         background-color: var(--color-card);
@@ -151,6 +161,13 @@
                             right: 0;
                         }
                     }
+                    &.active{
+                        transform: scaleY(1);
+                        opacity: 1;
+                        visibility: visible;
+                        clip: rect(0px, 100vw, 200vh, -30px);
+                        transition: clip 0.6s linear, opacity 0.4s linear;
+                    }
                 }
 
                 .single-mega-item {
@@ -167,6 +184,9 @@
                         opacity: 1;
                         visibility: visible;
                         top: 100%;
+
+                        clip: rect(0px, 100vw, 200vh, -30px);
+                        transition: clip 0.6s linear, opacity 0.4s linear;
                     }
                 }
             }
@@ -195,3 +215,63 @@
     }
 }
 
+
+.mainmenu .with-megamenu .tmp-megamenu .demos-area-drop-down{
+    ul.mega-menu-item{
+        display: flex;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        gap: 6px;
+        li{
+            flex-basis: 16%;
+            background: #121010;
+            border-radius: 2px;
+            overflow: hidden;
+            display: block;
+            a{
+                margin: 0 !important;
+                border-radius: 0 !important;
+                &.thumbnail-demos{
+                    padding: 5px 5px;
+                }
+                &:nth-child(2){
+                    padding: 6px 0 10px 5px !important;
+                    line-height: 1;
+                    &:hover{
+                        background: var(--color-primary) !important;
+                        color: var(--color-white);
+                    }
+                }
+                &.active{
+                    &.thumbnail-demos{
+                        background: #5137f974 !important;
+                        backdrop-filter: blur(2px);
+                    }
+                    &:nth-child(2){
+                        background: #5137f974;
+                        color: var(--color-white);
+                        backdrop-filter: blur(2px);
+                    }
+                }
+                .tmp-badge-card {
+                    position: absolute;
+                    z-index: 2;
+                    letter-spacing: 0.5px;
+                    top: 10px;
+                    right: 10px;
+                }
+            }
+            &:hover{
+                .thumbnail-demos{
+                    background: #5137f974 !important;
+                }
+                a{
+                    &:nth-child(2){
+                        background: #5137f974;
+                        color: var(--color-white);
+                    }
+                }
+            }
+        }
+    }
+}

@@ -540,3 +540,109 @@
         filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7500%) hue-rotate(3deg) brightness(119%) contrast(107%);
     }
 }
+
+
+.banner-splash-area{
+    position: relative;
+    z-index: 1;
+    .slider-bg-light {
+        position: absolute;
+        right: 0%;
+        top: 0;
+        min-width: 300px;
+        z-index: -1;
+        height: 100%;
+        width: 100%;
+        img{
+            height: 100%;
+            object-fit: cover;
+            width: 100%;
+        }
+    }
+    .bg-circle-area{
+        position: absolute;
+        top: 15%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border: 1px solid rgba(255,255,255,0.14); 
+        background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02)); 
+        backdrop-filter: blur(1px); 
+        height: 1500px;
+        width: 1500px;
+        border-radius: 50%;
+        z-index: -1;
+    }
+    .category-area-main{
+        .single-category{ 
+            padding: 10px 30px; 
+            background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02)); 
+            border-radius: 100px; 
+            backdrop-filter: blur(6px) saturate(120%); 
+            position: absolute; 
+            border: 1px solid rgba(255,255,255,0.14); 
+            overflow: hidden; z-index: 1; 
+            box-shadow: 0 6px 18px rgba(2,6,23,0.12); 
+            &.one{
+                top: 20%; 
+                left: 5%; 
+            }
+            &.two{
+                top: 30%; 
+                left: 7%; 
+            }
+            &.three{
+                top: 40%; 
+                left: 9%; 
+            }
+            &.four{
+                top: 50%; 
+                left: 11%; 
+            }
+            &.five{
+                top: 60%; 
+                left: 15%; 
+            }
+            &.six{
+                top: 70%; 
+                left: 19%; 
+            }
+            &.seven{
+                top: 80%; 
+                left: 25%; 
+            }
+            &.eight{
+                top: 20%;
+                right: 5%;
+            }
+            &.nine{
+                top: 30%;
+                right: 7%;
+            }
+            &.ten{
+                top: 40%;
+                right: 9%;
+            }
+            &.eleven{
+                top: 50%;
+                right: 11%;
+            }
+            &.twelve{
+                top: 60%;
+                right: 15%;
+            }
+            &.thirteen{
+                top: 70%;
+                right: 19%;
+            }
+            &.fourteen{
+                top: 80%;
+                right: 25%;
+            }
+            p{ 
+                margin: 0; 
+                color: var(--color-white); 
+            } 
+        }
+    }
+}
+

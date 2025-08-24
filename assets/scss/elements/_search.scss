@@ -3,6 +3,9 @@
     transform: inherit;
     opacity: 1;
     transform: scaleY(1);
+
+    clip: rect(0px, 100vw, 200vh, -30px);
+    transition: clip 0.6s linear, opacity 0.4s linear;
 }
 
 .tmp-search-input-area {
@@ -26,6 +29,11 @@
     z-index: 1000;
     overflow: hidden;
     display: block;
+
+    transform: scaleY(0);
+    clip: rect(0px, 200vw, 0, 0px);
+    transform: translateZ(0);
+
     .bg-text{
         position: absolute;
         left: 50%;
@@ -103,9 +111,8 @@
             display: flex;
             align-items: center;
             margin: auto;
-
+            border-radius: 6px;
             input {
-                background: var(--color-card);
                 border-radius: 5px;
                 height: 55px;
                 color: var(--color-white);
