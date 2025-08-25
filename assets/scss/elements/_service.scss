@@ -575,3 +575,121 @@
 }
 
 
+
+
+.feature-list-service {
+        padding: 0;
+        list-style: none;
+        li {
+            display: flex;
+            .icon {
+                background: var(--color-primary);
+                width: 53px;
+                height: 53px;
+                border-radius: 4px;
+                color: var(--color-white);
+                text-align: center;
+                min-width: 30px;
+                i {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    height: 100%;
+                    font-size: 32px;
+                }
+            }
+            .title-wrapper {
+                margin-left: 22px;
+                .title {
+                    font-size: 18px;
+                    margin: 0;
+                }
+                .text {
+                    font-size: 16px;
+                    margin-bottom: 20px;
+                    max-width: 90%;
+                    margin-top: 13px;
+                    @media #{$large-mobile} {
+                        max-width: 100%;
+                    }
+                }
+            }
+        }
+    }
+
+
+
+.sticky-top-service{
+    position: sticky;
+    top: 120px;
+}
+
+.tmp-single-wized{
+    background: var(--color-card);
+    border-radius: 6px;
+    padding: 40px;
+    margin-bottom: 40px;
+    .wized-header{
+        margin-bottom: 10px;
+        color: #fff;
+    }
+    .wized-body{
+        margin-top: 30px;
+        .single-categories {
+            margin-bottom: 15px;
+            padding: 0;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            li {
+                list-style: none;
+                border-radius: 5px;
+                overflow: hidden;
+                margin: 10px 0 !important;
+                a {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    padding: 15px 25px;
+                    background: var(--color-border);
+                    color: #ffffff;
+                    font-weight: 500;
+                    transition: .3s;
+                    border-radius: 5px;
+
+                    i {
+                        color: #ffffff;
+                        transition: .3s;
+                    }
+
+                    &:hover {
+                        color: var(--color-white);
+                        i {
+                            color: var(--color-primary);
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+.thumbnail-video-service{
+    overflow-x: hidden;
+    height: auto;
+    width: auto;
+    padding: 35px;
+    border-radius: 6px;
+    video{
+        width: 100%;
+        height: auto;
+        border-radius: 6px;
+    }
+}
+
+.bg_image--2-webp{
+    background-image: url(../images/bg/02.webp);
+}

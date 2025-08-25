@@ -67,16 +67,11 @@
                             margin: 0 10px;
                             border-radius: 3px;
                             @extend %transition;
-                            &:hover {
-                                color: var(--color-primary) !important;
-                                background: var(--color-card);
-                                color: var(--color-white) !important;
-                                background: var(--color-dark);
-                                margin-left: 15px;
-                            }
+                            &:hover,
                             &.active {
-                                color: var(--color-primary) !important;
-                                background: var(--color-card);
+                                color: var(--color-white) !important;
+                                background: var(--color-dark) !important;
+                                margin-left: 15px;
                             }
                         }
                     }
@@ -90,6 +85,41 @@
 
                         clip: rect(0px, 100vw, 200vh, -30px);
                         transition: clip 0.6s linear, opacity 0.4s linear;
+                    }
+                }
+            }
+            &.has-third-lev{
+                position: relative;
+                &>a{
+                    position: relative;
+                    &::after{
+                        font-family: 'feather';
+                        position: absolute;
+                        content: "\e930";
+                        right: 15px;
+                        left: auto;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        transition: .3s;
+                    }
+                }
+                .submenu{
+                    position: absolute;
+                    right: 0;
+                    top: 15px !important;
+                    left: 100%;
+                    opacity: 0 !important;
+                    transition: .3s !important;
+                }
+                &:hover{
+                    &>a{
+                        &::after{
+                            right: 5px;
+                        }
+                    }
+                    .submenu{
+                        top: -12px !important;
+                        opacity: 1 !important;
                     }
                 }
             }

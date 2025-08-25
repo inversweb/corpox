@@ -564,3 +564,26 @@ body{
 .overflow-x-visible{
     overflow-x: visible;
 }
+
+.listing-style-solid{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    li{
+        position: relative;
+        padding-left: 30px;
+        line-height: 34px;
+        font-weight: 500;
+        font-size: 16px;
+        &::before{
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 0;
+            content: "\e92c";
+            color: #106eea;
+            font-size: 20px;
+            font-family: 'feather' !important;
+        }
+    }
+}
