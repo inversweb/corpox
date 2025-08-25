@@ -218,13 +218,21 @@
 
         preloader: function () {
 
-          var preload = $("#inverweb-load");
+var preload = document.querySelector('#inverweb-load');
 
-          if (preload.length) {
-            window.addEventListener('load', function () {
-              document.querySelector('#inverweb-load').classList.add("loaded");
-            });
-          };
+if (preload) {
+  var maxTimeout = setTimeout(function () {
+    preload.classList.add("loaded"); // max 3 sec por off
+  }, 3000);
+
+  window.addEventListener('load', function () {
+    clearTimeout(maxTimeout); // max timeout cancel
+    preload.classList.add("loaded"); // joto fast load hoy turant off
+  });
+}
+
+
+
 
         },
         
