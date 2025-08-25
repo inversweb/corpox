@@ -10,17 +10,35 @@
     <title>Elements || Corpox Business and Consulting Bootstrap5 Template</title>
     <!-- Favicon -->
     <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.png">
-    <!-- CSS ============================================ -->
-    <link rel="stylesheet" href="assets/css/vendor/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/plugins/animation.css">
-    <link rel="stylesheet" href="assets/css/plugins/feature.css">
-    <link rel="stylesheet" href="assets/css/plugins/magnify.min.css">
-    <link rel="stylesheet" href="assets/css/plugins/slick.css">
-    <link rel="stylesheet" href="assets/css/plugins/slick-theme.css">
-    <link rel="stylesheet" href="assets/css/plugins/lightbox.css">
-    <link rel="stylesheet" href="assets/css/plugins/odometer.css">
-    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- Critical CSS (Inline small above-the-fold CSS here if possible) -->
+
+
+    <!-- Non-critical CSS deferred -->
+    <link rel="stylesheet" href="assets/css/plugins/animation.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="assets/css/plugins/feature.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="assets/css/plugins/magnify.min.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="assets/css/plugins/slick.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="assets/css/plugins/slick-theme.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="assets/css/plugins/lightbox.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="assets/css/plugins/odometer.css" media="print" onload="this.media='all'">
+
+
+    <!-- Preload main CSS -->
+    <link rel="preload" href="assets/css/vendor/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="assets/css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <!-- Fallback for no-JS users -->
+    <noscript>
+        <link rel="stylesheet" href="assets/css/plugins/animation.css">
+        <link rel="stylesheet" href="assets/css/plugins/feature.css">
+        <link rel="stylesheet" href="assets/css/plugins/magnify.min.css">
+        <link rel="stylesheet" href="assets/css/plugins/slick.css">
+        <link rel="stylesheet" href="assets/css/plugins/slick-theme.css">
+        <link rel="stylesheet" href="assets/css/plugins/lightbox.css">
+        <link rel="stylesheet" href="assets/css/plugins/odometer.css">
+    </noscript>
 </head>
+
 
 <body>
     <main class="page-wrapper">
