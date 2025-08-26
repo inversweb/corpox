@@ -596,61 +596,114 @@
             border: 1px solid rgb(255 255 255 / 6%); 
             overflow: hidden; z-index: 1; 
             box-shadow: 0 6px 18px rgba(2,6,23,0.12); 
+            p{
+                @media #{$smlg-device} {
+                    font-size: 14px;
+                }
+            }
+            @media #{$smlg-device} {
+                padding: 6px 16px;
+            }
+            @media #{$mdsm-layout} {
+                display: none;
+            }
             &.one{
                 top: 20%; 
                 left: 5%; 
+                @media #{$smlg-device} {
+                    left: 1%; 
+                }
             }
             &.two{
                 top: 30%; 
                 left: 7%; 
+                @media #{$smlg-device} {
+                    left: 3%; 
+                }
             }
             &.three{
                 top: 40%; 
                 left: 9%; 
+                 @media #{$smlg-device} {
+                    left: 5%; 
+                }
             }
             &.four{
                 top: 50%; 
                 left: 11%; 
+                 @media #{$smlg-device} {
+                    left: 7%; 
+                }
             }
             &.five{
                 top: 60%; 
                 left: 15%; 
+                 @media #{$smlg-device} {
+                    left: 9%; 
+                }
             }
             &.six{
                 top: 70%; 
                 left: 19%; 
+                 @media #{$smlg-device} {
+                    left: 11%; 
+                }
             }
             &.seven{
                 top: 80%; 
                 left: 25%; 
+                 @media #{$smlg-device} {
+                    left: 13%; 
+                }
             }
             &.eight{
                 top: 20%;
                 right: 5%;
+                  @media #{$smlg-device} {
+                    right: 1%; 
+                }
             }
             &.nine{
                 top: 30%;
                 right: 7%;
+                  @media #{$smlg-device} {
+                    right: 3%; 
+                }
             }
             &.ten{
                 top: 40%;
                 right: 9%;
+                  @media #{$smlg-device} {
+                    right: 5%; 
+                }
             }
             &.eleven{
                 top: 50%;
                 right: 11%;
+                  @media #{$smlg-device} {
+                    right: 7%; 
+                }
             }
             &.twelve{
                 top: 60%;
                 right: 15%;
+                  @media #{$smlg-device} {
+                    right: 9%; 
+                }
             }
             &.thirteen{
                 top: 70%;
                 right: 19%;
+                  @media #{$smlg-device} {
+                    right: 11%; 
+                }
             }
             &.fourteen{
                 top: 80%;
                 right: 25%;
+                  @media #{$smlg-device} {
+                    right: 13%; 
+                }
             }
             p{ 
                 margin: 0; 

@@ -113,11 +113,14 @@
 
 .display-two {
     font-size: 85px;
+    @media #{$laptop-device} {
+        font-size: 54px;
+    }
     @media #{$lg-layout} {
-        font-size: 70px;
+        font-size: 50px;
     }
     @media #{$md-layout} {
-        font-size: 65px;
+        font-size: 46px;
     }
 
     @media #{$sm-layout} {
