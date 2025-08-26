@@ -44,49 +44,47 @@
             invJs.lightBoxJs();
             invJs.imageSlideGsap();
             invJs.preloaderWithBannerActivation();
+            invJs.ursorAnimate();
         },
 
         backtotopLeft: function () {
- jQuery(function ($) {
+          jQuery(function ($) {
 
-    var scrollTrigger = 100; // show করার জন্য স্ক্রল ট্রিগার
-    var shown = false;
+              var scrollTrigger = 100; // show করার জন্য স্ক্রল ট্রিগার
+              var shown = false;
 
-    function backToTopHandler() {
-        var scrollTop = $(window).scrollTop();
+              function backToTopHandler() {
+                  var scrollTop = $(window).scrollTop();
 
-        // Show / Hide elements
-        if (scrollTop > scrollTrigger && !shown) {
-            $('.show-on-scroll').addClass('show').removeClass('hide');
-            shown = true;
-        }
-        if (scrollTop <= scrollTrigger && shown) {
-            $('.show-on-scroll').addClass('hide').removeClass('show');
-            shown = false;
-        }
+                  // Show / Hide elements
+                  if (scrollTop > scrollTrigger && !shown) {
+                      $('.show-on-scroll').addClass('show').removeClass('hide');
+                      shown = true;
+                  }
+                  if (scrollTop <= scrollTrigger && shown) {
+                      $('.show-on-scroll').addClass('hide').removeClass('show');
+                      shown = false;
+                  }
 
-        // Scroll progress (max height = 100px)
-        var pageHeight = $(document).height() - $(window).height();
-        var progress = (scrollTop / pageHeight) * 100; // % progress
-        var maxHeight = 100; // px
-        var barHeight = (progress / 100) * maxHeight;
+                  // Scroll progress (max height = 100px)
+                  var pageHeight = $(document).height() - $(window).height();
+                  var progress = (scrollTop / pageHeight) * 100; // % progress
+                  var maxHeight = 100; // px
+                  var barHeight = (progress / 100) * maxHeight;
 
-        $(".scrollbar-v").css("height", barHeight + "px");
-    }
+                  $(".scrollbar-v").css("height", barHeight + "px");
+              }
 
-    // Scroll to top click (float-text + scrollbar-v)
-    $('.float-text a, .scrollbar-v').on('click', function (e) {
-        e.preventDefault();
-        $('html, body').stop(true).animate({ scrollTop: 0 }, 700);
-    });
+              // Scroll to top click (float-text + scrollbar-v)
+              $('.float-text a, .scrollbar-v').on('click', function (e) {
+                  e.preventDefault();
+                  $('html, body').stop(true).animate({ scrollTop: 0 }, 700);
+              });
 
-    // Scroll listener
-    $(window).on('scroll', backToTopHandler);
+              // Scroll listener
+              $(window).on('scroll', backToTopHandler);
 
-});
-
-
-
+          });
         },
 
         autoslidertab: function () {
@@ -218,21 +216,18 @@
 
         preloader: function () {
 
-var preload = document.querySelector('#inverweb-load');
+          var preload = document.querySelector('#inverweb-load');
 
-if (preload) {
-  var maxTimeout = setTimeout(function () {
-    preload.classList.add("loaded"); // max 3 sec por off
-  }, 3000);
+          if (preload) {
+            var maxTimeout = setTimeout(function () {
+              preload.classList.add("loaded"); // max 3 sec por off
+            }, 2500);
 
-  window.addEventListener('load', function () {
-    clearTimeout(maxTimeout); // max timeout cancel
-    preload.classList.add("loaded"); // joto fast load hoy turant off
-  });
-}
-
-
-
+            window.addEventListener('load', function () {
+              clearTimeout(maxTimeout); // max timeout cancel
+              preload.classList.add("loaded"); // joto fast load hoy turant off
+            });
+          }
 
         },
         
@@ -291,7 +286,6 @@ if (preload) {
         },
 
 
-
         popupMobileMenu: function (e) {
             $('.hamberger-button').on('click', function (e) {
                 $('.popup-mobile-menu').addClass('active');
@@ -313,8 +307,6 @@ if (preload) {
                 e.target === this && $('.popup-mobile-menu').removeClass('active') && $('.popup-mobile-menu .mainmenu .has-droupdown > a, .popup-mobile-menu .mainmenu .with-megamenu > a').siblings('.submenu, .tmp-megamenu').removeClass('active').slideUp('400') && $('.popup-mobile-menu .mainmenu .has-droupdown > a, .popup-mobile-menu .mainmenu .with-megamenu > a').removeClass('open');
             });
         },
-        
-
         
 
         slickSliderActivation: function () {
@@ -587,7 +579,6 @@ if (preload) {
 			});
         },
 
-
         counterJumpanimation: function () {
             gsap.registerPlugin(ScrollTrigger);
             gsap.set('.counter_animation .counter__anim', {
@@ -786,6 +777,7 @@ if (preload) {
                 stagger: 0.05
             });
         },
+
         animationOnHover: function () {
 let cards = document.querySelectorAll('.tmponhover');
 cards.forEach((tmpOnHover) => {
@@ -853,6 +845,7 @@ cards.forEach((tmpOnHover) => {
                 cssEasing: 'linear'
             });
         },
+
         imageSlideGsap: function () {
             $(document).ready(function () {
                 gsap.fromTo(
@@ -960,6 +953,26 @@ cards.forEach((tmpOnHover) => {
             });
           });
         },
+
+        ursorAnimate: function () {
+            var myCursor = $('.mouse-cursor');
+            if (myCursor.length) {
+                if ($('body')) {
+                    const e = document.querySelector('.cursor-inner'),
+                        t = document.querySelector('.cursor-outer');
+                    let n, i = 0,
+                        o = !1;
+                    window.onmousemove = function (s) {
+                        o || (t.style.transform = "translate(" + s.clientX + "px, " + s.clientY + "px)"), e.style.transform = "translate(" + s.clientX + "px, " + s.clientY + "px)", n = s.clientY, i = s.clientX
+                    }, $('body').on("mouseenter", "a, .cursor-pointer", function () {
+                        e.classList.add('cursor-hover'), t.classList.add('cursor-hover')
+                    }), $('body').on("mouseleave", "a, .cursor-pointer", function () {
+                        $(this).is("a") && $(this).closest(".cursor-pointer").length || (e.classList.remove('cursor-hover'), t.classList.remove('cursor-hover'))
+                    }), e.style.visibility = "visible", t.style.visibility = "visible"
+                }
+            }
+        },
+
 
 
 

@@ -565,12 +565,26 @@
         left: 50%;
         transform: translate(-50%, -50%);
         border: 1px solid rgba(255,255,255,0.14); 
-        background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02)); 
-        backdrop-filter: blur(1px); 
+        border-bottom: none !important;
+        background: linear-gradient(180deg, rgb(0 0 0 / 6%), rgb(0 0 0 / 2%));
+        backdrop-filter: blur(10px);
         height: 1500px;
         width: 1500px;
         border-radius: 50%;
         z-index: -1;
+        overflow: hidden;
+        &::before{
+            content: "";
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            background-image: url(../images/icons/noise.gif);
+            z-index: -1;
+            background-color: rebeccapurple;
+            opacity: 0.03;
+        }
     }
     .category-area-main{
         .single-category{ 
@@ -579,7 +593,7 @@
             border-radius: 100px; 
             backdrop-filter: blur(6px) saturate(120%); 
             position: absolute; 
-            border: 1px solid rgba(255,255,255,0.14); 
+            border: 1px solid rgb(255 255 255 / 6%); 
             overflow: hidden; z-index: 1; 
             box-shadow: 0 6px 18px rgba(2,6,23,0.12); 
             &.one{

@@ -1157,6 +1157,7 @@
 .overlyto-top {
     position: relative;
     margin-top: -259px;
+    z-index: 10;
 }
 
 .business-banner {
@@ -2419,4 +2420,11 @@ body {
 
 .mt-dec-150{
     margin-top: -150px;
+}
+
+.tmp-slider-style-banner-tin {
+    background-image: url(../images/shape/light.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
 }

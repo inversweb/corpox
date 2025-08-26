@@ -236,7 +236,7 @@
     margin: -3px;
     padding-left: 0;
     a {
-        background: transparent;
+        background: var(--color-card);
         display: inline-block;
         height: 40px;
         color: var(--color-body);
@@ -245,9 +245,8 @@
         text-decoration: none;
         margin: 3px;
         border: 2px solid var(--color-border);
-        @extend %transition;
         padding: 0 20px;
-        border-radius: 500px;
+        border-radius: 3px;
         &:hover {
             background: var(--color-primary);
             color: #ffffff;

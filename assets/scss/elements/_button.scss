@@ -728,12 +728,13 @@ img.mfp-img {
 
         .icon {
             font-size: 35px;
-            color: var(--color-body);
+            color: var(--color-white);
             font-weight: 400;
             position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
+            transition: .2s;
         }
 
         .eye {
@@ -767,7 +768,9 @@ img.mfp-img {
             .textcircle {
                 animation: rotateIt 7s linear infinite;
             }
-
+            .icon{
+                transform: translate(-50%, -50%) scale(1.4);
+            }
             .eye__lashes-up,
             .eye__inner,
             .eye__iris {
