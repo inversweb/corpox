@@ -181,6 +181,7 @@
     .wrapper{
         position: relative;
         z-index: 1;
+        overflow: hidden;
         .bg-content{
             position: absolute;
             left: 30px;
@@ -206,11 +207,13 @@
 
 .feature-image-add-header {
     display: flex;
-    align-items: flex-end;
     height: 100%;
-    margin-right: -10px;
+    margin-right: 0;
     position: relative;
-    margin-left: 5px;
+    margin-left: 0;
+    img{
+        object-fit: cover;
+    }
 }
 .mainmenu-nav .mainmenu > li{
     &:hover{
