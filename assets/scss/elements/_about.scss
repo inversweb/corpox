@@ -11,8 +11,12 @@
         @media #{$smlg-device} {
             font-size: 26px;
         }
+        @media #{$mdsm-layout} {
+            margin-bottom: 15px;
+        }
         @media #{$large-mobile} {
             font-size: 26px;
+            margin-bottom: 15px;
         }
         @media #{$small-mobile} {
             font-size: 26px;
@@ -268,10 +272,10 @@
             left: 15%;
         }
         @media #{$mdsm-layout} {
-            left: 0%;
+            left: 50%;
         }
         @media #{$sm-layout} {
-            left: 55px;
+            left: 15%;
         }
         @media #{$large-mobile} {
             padding: 5px 16px;

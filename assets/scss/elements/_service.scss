@@ -353,6 +353,12 @@
 .tmp-service-details{
     .thumbnail-large-details{
         height: 650px;
+        @media #{$laptop-device} {
+            height: auto;
+        }
+        @media #{$smlg-device} {
+            height: auto;
+        }
     }
 }
 .service-wrapper {
@@ -496,7 +502,9 @@
     flex-wrap: wrap;
     gap: 30px;
     justify-content: center;
-
+    @media #{$large-mobile} {
+        justify-content: flex-start;
+    }
     .single-service-wrapper {
         display: flex;
         align-items: center;
@@ -517,9 +525,11 @@
                 font-weight: 400;
                 font-family: var(--font-primary);
                 letter-spacing: 0.5px;
-
+                @media #{$mdsm-layout} {
+                    font-size: 16px;
+                }
                 @media #{$large-mobile} {
-                    font-size: 18px;
+                    font-size: 16px;
                 }
             }
         }
@@ -529,7 +539,9 @@
             display: block;
             overflow: hidden;
             border-radius: 6px;
-
+            @media #{$mdsm-layout} {
+                max-width: 50px;
+            }
             img {
                 transition: .6s;
             }

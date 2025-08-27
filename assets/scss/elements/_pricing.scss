@@ -211,6 +211,9 @@
     border-bottom: 1px solid var(--color-border);
     padding-bottom: 20px;
     margin-bottom: 34px;
+    @media #{$smlg-device} {
+        margin-bottom: 15px;
+    }
 }
 .pricing-table-items .pricing-table .pricing-table-header .top {
     margin-bottom: 30px;
@@ -246,6 +249,9 @@
     margin-bottom: 80px;
     padding: 0;
     list-style: none;
+    @media #{$smlg-device} {
+        margin-bottom: 40px;
+    }
 }
 .pricing-table-items .pricing-table ul li {
     font-size: 14px;

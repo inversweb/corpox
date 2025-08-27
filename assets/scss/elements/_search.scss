@@ -33,7 +33,6 @@
     transform: scaleY(0);
     clip: rect(0px, 200vw, 0, 0px);
     transform: translateZ(0);
-
     .bg-text{
         position: absolute;
         left: 50%;
@@ -74,8 +73,10 @@
         display: flex;
         align-items: center;
         gap: 14px;
-        
         margin-top: 25px;
+        @media #{$sm-layout} {
+            flex-wrap: wrap;
+        }
         .title{
             margin: 0;
             font-weight: 400;
@@ -85,6 +86,9 @@
             display: flex;
             align-items: center;
             gap: 12px;
+            @media #{$sm-layout} {
+                flex-wrap: wrap;
+            }
             a{
                 display: block;
                 padding: 3px 15px;
@@ -106,6 +110,20 @@
     .search-input-inner {
         max-width: 85%;
         margin: auto;
+        @media #{$smlg-device} {
+            overflow-y: scroll;
+            max-height: 90vh;
+            overflow-x: hidden;
+            &::-webkit-scrollbar {
+                display: none;
+            }
+        }
+        @media #{$mdsm-layout} {
+            max-width: 80%;
+        }
+        @media #{$sm-layout} {
+            padding-top: 50px;
+        }
         .input-div {
             width: 100%;
             display: flex;
@@ -156,11 +174,16 @@
         &::after{
             border-radius: 50%;
         }
-        @media(max-width:500px){
-            display: none;
+        @media #{$smlg-device} {
+            height: 45px;
+            min-width: 45px;
+        }
+        @media #{$sm-layout} {
+            right: 15px;
+            top: 15px;
         }
         img{
-            max-width: 20px;
+            max-width: 16px;
         }
         i {
             position: relative;

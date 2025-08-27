@@ -72,6 +72,9 @@
     .footer-top {
         padding: 100px 0;
         padding-bottom: 70px;
+        @media #{$large-mobile} {
+            padding-bottom: 40px;
+        }
         .tmp-footer-widget {
             .text-big {
                 font-size: 21px;

@@ -6,6 +6,9 @@
         display: flex;
         margin: 0;
         padding: 0;
+        @media #{$smlg-device} {
+            gap: 5px;
+        }
         > li {
             > a {
                 color: #fff;
@@ -236,6 +239,9 @@
             top: 43%;
             font-family: "feather" !important;
             line-height: 1;
+            @media #{$smlg-device} {
+                right: -7px;
+            }
         }
         &:hover{
             &::after{

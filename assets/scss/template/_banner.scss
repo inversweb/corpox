@@ -14,7 +14,9 @@
     height: 850px;
     display: flex;
     align-items: center;
-
+    @media #{$smlg-device} {
+        height: 610px;
+    }
     @media #{$md-layout} {
         height: auto;
         padding: 150px 0;
@@ -1611,6 +1613,9 @@ body {
         margin-bottom: 15px;
         line-height: 1.3;
         margin-top: 10px;
+        @media #{$sm-layout} {
+            font-size: 50px;
+        }
         @media #{$large-mobile} {
             font-size: 40px;
         }
@@ -1836,6 +1841,9 @@ body {
 }
 .mt-dec-250{
     margin-top: -250px;
+    @media #{$mdsm-layout} {
+        margin-top: 0px;
+    }
 }
 
 .tmp-gallery{
@@ -1850,8 +1858,11 @@ body {
     @media #{$smlg-device} {
         padding-top: 120px;
     }
-    @media #{$sm-layout} {
+    @media #{$mdsm-layout} {
         padding-top: 60px;
+    }
+    @media #{$sm-layout} {
+        padding-top: 50px;
     }
 }
 .realstate-banner-style-two{
@@ -1871,8 +1882,16 @@ body {
             font-size: 40px;
         }
         br{
+            @media #{$laptop-device} {
+                display: none;
+            }
             @media #{$large-mobile} {
                 display: none;
+            }
+        }
+        .header-caption{
+            @media #{$laptop-device} {
+                line-height: 2;
             }
         }
         .large{
@@ -1992,8 +2011,8 @@ body {
         top: 0;
         left: 0;
         gap: 10px;
-        width: 100vh;
-        height: 50vw;
+        width: 100%;
+        height: 100%;
         display: flex;
         position: absolute;
         flex-direction: column;
@@ -2001,6 +2020,9 @@ body {
         transform-origin: bottom left;
         transform: translateY(-100%) rotate(90deg);
         pointer-events: none;
+        @media #{$sm-layout} {
+            min-width: 169%;
+        }
     }
 
     .line:nth-child(1) {
@@ -2368,6 +2390,9 @@ body {
 
 .slider-hr-website-clip{
     clip-path: polygon(0% 0%, 0% 0%, 11.499% 0%, 22.022% 0%, 31.809% 0%, 41.102% 0%, 50.142% 0%, 59.171% 0%, 68.43% 0%, 78.16% 0%, 88.603% 0%, 100% 0%, 100% 100%, 100% 100%, 86.685% 95.4%, 75.613% 91.823%, 66.218% 89.267%, 57.938% 87.734%, 50.205% 87.223%, 42.456% 87.734%, 34.126% 89.267%, 24.65% 91.823%, 13.463% 95.4%, 0% 100%, 0% 0%);
+    @media #{$large-mobile} {
+        clip-path: none;
+    }
 }
 .slider-hr-website-banner{
     .inner{
@@ -2376,6 +2401,12 @@ body {
         position: relative;
         margin-top: -100px;
         z-index: 1;
+        @media #{$mdsm-layout} {
+            margin-top: 0;
+        }
+        @media #{$sm-layout} {
+            max-width: 90%;
+        }
         &::after{
             content: "";
             border-radius: 50%;
@@ -2389,6 +2420,14 @@ body {
             opacity: 1;
             z-index: -1;
             animation: pulse 8s ease-in-out infinite alternate;
+             @media #{$mdsm-layout} {
+                width: 600px;
+                height: 600px;
+            }
+            @media #{$large-mobile} {
+                animation: none;
+                border-radius: 0;
+            }
         }
         &::before{
             content: "";
@@ -2404,6 +2443,13 @@ body {
             z-index: -1;
             animation: pulse 16s ease-in-out infinite alternate;
             backdrop-filter: blur(2px);
+            @media #{$mdsm-layout} {
+                width: 710px;
+                height: 710px;
+            }
+            @media #{$large-mobile} {
+                animation: none;
+            }
         }
     }
 

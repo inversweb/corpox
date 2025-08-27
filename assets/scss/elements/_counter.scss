@@ -197,6 +197,9 @@
     .title {
         font-size: 48px;
         margin-bottom: 5px;
+        @media #{$sm-layout} {
+            font-size: 32px;
+        }
     }
 
     span.bototm {

@@ -132,6 +132,9 @@
     align-items: center;
     justify-content: center;
     border-radius: 100%;
+    @media #{$small-mobile} {
+        width: 25px;    
+    }
 }
 
 .header-left-align {
@@ -226,6 +229,12 @@
         display: flex;
         align-items: center;
         gap: 30px;
+        @media #{$mdsm-layout} {
+            gap: 15px;
+        }
+        @media #{$small-mobile} {
+            gap: 8px;
+        }
         .search-area-btn{
             max-width: 30px;
             cursor: pointer;

@@ -98,11 +98,14 @@ Timeline Area
     
     @media #{$md-layout} {
         padding-left: 50px;
+        top: 0;
+        position: relative;
     }
 
     @media #{$sm-layout} {
         padding-left: 30px;
         position: relative;
+        top: 0;
     }
 
     .single-content {
@@ -431,7 +434,7 @@ Timeline Area
         display: flex;
         align-items: center;
         justify-content: center;
-        border-radius: 6px;
+        border-radius: 50%;
         font-weight: 700;
         font-size: 30px;
         color: var(--color-white);
