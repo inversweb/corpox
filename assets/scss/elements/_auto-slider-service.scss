@@ -20,6 +20,9 @@
                 .tab-button{
                     padding: 23px 27px;
                     background: rgb(0 0 0 / 18%);
+                    @media #{$large-mobile} {
+                        padding: 10px 27px;
+                    }
                     .tab{
                         display: flex;
                         align-items: flex-start;
@@ -52,6 +55,9 @@
                         font-size: 26px;
                         margin-bottom: 0;
                         color: #fff;
+                        @media #{$large-mobile} {
+                            font-size: 18px;
+                        }
                     }
                     &::after{
                         content: "";

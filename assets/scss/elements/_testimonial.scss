@@ -290,13 +290,12 @@
         &:hover {
             .tmp-lookbook-content-box-wrapper {
                 @media #{$sm-layout} {
-                    height: 100%;
-                    width: 100%;
+                    height: auto;
+                    width: auto;
                     position: fixed;
-                    top: 0;
-                    left: 0;
-                    right: 0;
-                    bottom: 0;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
                     background: #00000080;
                     display: flex;
                     align-items: center;

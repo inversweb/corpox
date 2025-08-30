@@ -177,8 +177,8 @@
 
 .tag-news{
     position: absolute;
-    left: 30px;
-    bottom: 30px;
+    left: 10px;
+    top: 10px;
     display: block;
     max-width: max-content;
     padding: 5px 15px;
@@ -192,7 +192,7 @@
     list-style: none;
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 10px;
     margin: 0;
     padding: 0;
     padding-left: 15px;
@@ -213,8 +213,16 @@
         margin: 0;
         padding: 0;
         font-size: 16px;
-        &.separator{
-            color: var(--color-white)
+        span{
+            i{
+                margin-right: 5px;
+            }
+        }
+        &.comment-area{
+            margin-left: 12px;
+            i{
+                margin-right: 3px;
+            }
         }
     }
 }

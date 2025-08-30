@@ -141,6 +141,9 @@
             list-style: none;
             padding-left: 14px;
             display: none;
+            @media #{$mdsm-layout} {
+                padding-left: 0;
+            }
         }
 
         .mega-menu-item {

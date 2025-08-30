@@ -474,6 +474,9 @@
                 @media #{$large-mobile} {
                     font-size: 36px;
                 }
+                @media #{$small-mobile} {
+                    font-size: 32px;
+                }
                 span{
                     color: var(--color-primary);
                 }
@@ -514,6 +517,9 @@
                 }
                 @media #{$sm-layout} {
                     padding-right: 0;
+                }
+                @media #{$small-mobile} {
+                    font-size: 14px;
                 }
             }
         }
@@ -2364,7 +2370,23 @@ body {
         overflow: hidden;
         width: 300px;
     }
-
+    .small-iamge-area{
+        position: absolute;
+        left: -20%;
+        bottom: 30px;
+        max-width: 50%;
+        margin-right: 30px;
+        @media #{$mdsm-layout} {
+            left: 0;
+            bottom: 55px;
+        }
+        .video-icon{
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
 }
 .tmp-banner-right-carousel{
     position: relative;
@@ -2387,6 +2409,43 @@ body {
     }
 }
 
+.title-index-12-marque{
+    .text-split-wrap-video{
+        position: relative;
+        padding-top: 120px;
+        @media #{$smlg-device} {
+            padding-top: 80px;
+        }
+        @media #{$large-mobile} {
+            padding-top: 0;
+        }
+        .title{
+            opacity: 1;
+            text-shadow: -8px 6px 0px #5237f9;
+            font-size: 150px;
+            @media #{$smlg-device} {
+                font-size: 140px;
+            }
+            @media #{$mdsm-layout} {
+                font-size: 90px;
+                line-height: 1;
+            }
+            @media #{$large-mobile} {
+                font-size: 50px;
+                line-height: 1;
+                text-shadow: none;
+            }
+            span{
+                -webkit-text-fill-color: unset;
+                -webkit-text-size-adjust: unset;
+                -webkit-text-stroke: unset;
+                color: var(--color-primary);
+                text-shadow: -8px 6px 0px var(--color-white);
+               
+            }
+        }
+    }
+}
 
 .slider-hr-website-clip{
     clip-path: polygon(0% 0%, 0% 0%, 11.499% 0%, 22.022% 0%, 31.809% 0%, 41.102% 0%, 50.142% 0%, 59.171% 0%, 68.43% 0%, 78.16% 0%, 88.603% 0%, 100% 0%, 100% 100%, 100% 100%, 86.685% 95.4%, 75.613% 91.823%, 66.218% 89.267%, 57.938% 87.734%, 50.205% 87.223%, 42.456% 87.734%, 34.126% 89.267%, 24.65% 91.823%, 13.463% 95.4%, 0% 100%, 0% 0%);
