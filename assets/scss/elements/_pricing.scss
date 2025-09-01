@@ -31,7 +31,7 @@
             }
         }
         &::after{
-            background: linear-gradient(0, rgb(82, 55, 249) 0%, rgba(237, 221, 83, 0) 80%);
+            background: linear-gradient(0, rgb(82 55 249 / 51%) 0%, rgba(237, 221, 83, 0) 80%);
         }
         &::before{
             background: var(--color-card) !important;

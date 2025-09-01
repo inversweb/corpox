@@ -129,21 +129,27 @@
 
 
         portfoliobounceAnimation: function () {
-          if (device_width > 991) {
-            gsap.set(".tmp_jump_animation-wrapper .tmp-jump__item", { opacity: 0, scale: 1.15, rotation: 0 })
-            gsap.to(".tmp_jump_animation-wrapper .tmp-jump__item", {
-              scrollTrigger: {
-                trigger: ".tmp_jump_animation-wrapper .tmp-jump__item",
-                start: "top 95%"
-              },
-              opacity: 1.3,
-              scale: 1,
-              duration: 1,
-              ease: "bounce",
-              stagger: 0.3,
-              rotation: 0
-            })
-          }
+
+            if (device_width > 991) {
+              let jump_items = document.querySelectorAll(".tmp_jump_animation-wrapper .tmp-jump__item");
+              
+              if (jump_items.length) {
+                gsap.set(jump_items, { opacity: 0, scale: 1.15, rotation: 0 });
+                gsap.to(jump_items, {
+                  scrollTrigger: {
+                    trigger: ".tmp_jump_animation-wrapper .tmp-jump__item",
+                    start: "top 95%"
+                  },
+                  opacity: 1.3,
+                  scale: 1,
+                  duration: 1,
+                  ease: "bounce",
+                  stagger: 0.3,
+                  rotation: 0
+                });
+              }
+            }
+
         },
 
         radialProgressOne: function () {
@@ -287,25 +293,45 @@
 
 
         popupMobileMenu: function (e) {
-            $('.hamberger-button').on('click', function (e) {
-                $('.popup-mobile-menu').addClass('active');
-            });
+          // Open menu
+          $('.hamberger-button').on('click', function (e) {
+              $('.popup-mobile-menu').addClass('active');
+          });
 
-            $('.close-menu').on('click', function (e) {
-                $('.popup-mobile-menu').removeClass('active');
-                $('.popup-mobile-menu .mainmenu .has-droupdown > a, .popup-mobile-menu .mainmenu .with-megamenu > a').siblings('.submenu, .tmp-megamenu').removeClass('active').slideUp('400');
-                $('.popup-mobile-menu .mainmenu .has-droupdown > a, .popup-mobile-menu .mainmenu .with-megamenu > a').removeClass('open')
-            });
+          // Close menu
+          $('.close-menu').on('click', function (e) {
+              $('.popup-mobile-menu').removeClass('active');
+              $('.popup-mobile-menu .mainmenu .has-droupdown > a, .popup-mobile-menu .mainmenu .with-megamenu > a, .popup-mobile-menu .mainmenu .has-third-lev > a')
+                  .siblings('.submenu, .tmp-megamenu')
+                  .removeClass('active')
+                  .slideUp(400);
+              $('.popup-mobile-menu .mainmenu .has-droupdown > a, .popup-mobile-menu .mainmenu .with-megamenu > a, .popup-mobile-menu .mainmenu .has-third-lev > a')
+                  .removeClass('open');
+          });
 
-            $('.popup-mobile-menu .mainmenu .has-droupdown > a, .popup-mobile-menu .mainmenu .with-megamenu > a').on('click', function (e) {
-                e.preventDefault();
-                $(this).siblings('.submenu, .tmp-megamenu').toggleClass('active').slideToggle('400');
-                $(this).toggleClass('open')
-            })
+          // Dropdown toggle (2nd + 3rd level)
+          $('.popup-mobile-menu .mainmenu .has-droupdown > a, .popup-mobile-menu .mainmenu .with-megamenu > a, .popup-mobile-menu .mainmenu .has-third-lev > a')
+              .on('click', function (e) {
+                  e.preventDefault();
+                  $(this).siblings('.submenu, .tmp-megamenu')
+                      .toggleClass('active')
+                      .slideToggle(400);
+                  $(this).toggleClass('open');
+          });
 
-            $('.popup-mobile-menu, .popup-mobile-menu .mainmenu.onepagenav li a').on('click', function (e) {
-                e.target === this && $('.popup-mobile-menu').removeClass('active') && $('.popup-mobile-menu .mainmenu .has-droupdown > a, .popup-mobile-menu .mainmenu .with-megamenu > a').siblings('.submenu, .tmp-megamenu').removeClass('active').slideUp('400') && $('.popup-mobile-menu .mainmenu .has-droupdown > a, .popup-mobile-menu .mainmenu .with-megamenu > a').removeClass('open');
-            });
+          // Close when clicking outside or on onepage nav link
+          $('.popup-mobile-menu, .popup-mobile-menu .mainmenu.onepagenav li a').on('click', function (e) {
+              if (e.target === this) {
+                  $('.popup-mobile-menu').removeClass('active');
+                  $('.popup-mobile-menu .mainmenu .has-droupdown > a, .popup-mobile-menu .mainmenu .with-megamenu > a, .popup-mobile-menu .mainmenu .has-third-lev > a')
+                      .siblings('.submenu, .tmp-megamenu')
+                      .removeClass('active')
+                      .slideUp(400);
+                  $('.popup-mobile-menu .mainmenu .has-droupdown > a, .popup-mobile-menu .mainmenu .with-megamenu > a, .popup-mobile-menu .mainmenu .has-third-lev > a')
+                      .removeClass('open');
+              }
+          });
+
         },
         
 
@@ -580,42 +606,49 @@
         },
 
         counterJumpanimation: function () {
-            gsap.registerPlugin(ScrollTrigger);
-            gsap.set('.counter_animation .counter__anim', {
-                y: -100,
-                opacity: 0,
-            })
-            if (device_width < 1023) {
-                const counterArray = gsap.utils.toArray('.counter_animation .counter__anim')
-                counterArray.forEach((item, i) => {
-                let counterTl = gsap.timeline({
-                    scrollTrigger: {
-                    trigger: item,
-                    start: 'top center+=200',
-                    }
-                })
-                counterTl.to(item, {
-                    y: 0,
-                    opacity: 1,
-                    ease: 'bounce',
-                    duration: 1.5,
-                })
-                })
-            } else {
-                gsap.to('.counter_animation .counter__anim', {
-                scrollTrigger: {
-                    trigger: '.counter_animation',
-                    start: 'top center+=300',
-                },
-                y: 0,
-                opacity: 1,
-                ease: 'bounce',
-                duration: 1.5,
-                stagger: {
-                    each: 0.3,
-                }
-                })
-            }
+           gsap.registerPlugin(ScrollTrigger);
+
+          let counters = document.querySelectorAll('.counter_animation .counter__anim');
+
+          if (counters.length) {
+              gsap.set(counters, {
+                  y: -100,
+                  opacity: 0,
+              });
+
+              if (device_width < 1023) {
+                  const counterArray = gsap.utils.toArray(counters);
+                  counterArray.forEach((item) => {
+                      let counterTl = gsap.timeline({
+                          scrollTrigger: {
+                              trigger: item,
+                              start: 'top center+=200',
+                          }
+                      });
+                      counterTl.to(item, {
+                          y: 0,
+                          opacity: 1,
+                          ease: 'bounce',
+                          duration: 1.5,
+                      });
+                  });
+              } else {
+                  gsap.to(counters, {
+                      scrollTrigger: {
+                          trigger: '.counter_animation',
+                          start: 'top center+=300',
+                      },
+                      y: 0,
+                      opacity: 1,
+                      ease: 'bounce',
+                      duration: 1.5,
+                      stagger: {
+                          each: 0.3,
+                      }
+                  });
+              }
+          }
+
       
         },
 
@@ -717,6 +750,8 @@
         },
 
         fonklsAnimation: function () {
+          let end_animation = document.getElementsByClassName('end');
+          if (end_animation.length) {
             let endTl = gsap.timeline({
                 repeat: -1,
                 delay: 0.2,
@@ -776,19 +811,22 @@
                 duration: 1.4,
                 stagger: 0.05
             });
+          }
+
+
         },
 
         animationOnHover: function () {
-let cards = document.querySelectorAll('.tmponhover');
-cards.forEach((tmpOnHover) => {
-  tmpOnHover.onmousemove = function (e) {
-    let rect = tmpOnHover.getBoundingClientRect();
-    let x = e.clientX - rect.left; // element এর ভিতরে X position
-    let y = e.clientY - rect.top;  // element এর ভিতরে Y position
-    tmpOnHover.style.setProperty('--x', `${x}px`);
-    tmpOnHover.style.setProperty('--y', `${y}px`);
-  };
-});
+          let cards = document.querySelectorAll('.tmponhover');
+          cards.forEach((tmpOnHover) => {
+            tmpOnHover.onmousemove = function (e) {
+              let rect = tmpOnHover.getBoundingClientRect();
+              let x = e.clientX - rect.left; // element এর ভিতরে X position
+              let y = e.clientY - rect.top;  // element এর ভিতরে Y position
+              tmpOnHover.style.setProperty('--x', `${x}px`);
+              tmpOnHover.style.setProperty('--y', `${y}px`);
+            };
+          });
         },
 
         jaraLux: function (e) {
@@ -848,6 +886,8 @@ cards.forEach((tmpOnHover) => {
 
         imageSlideGsap: function () {
             $(document).ready(function () {
+              let image_leftright = document.querySelectorAll('.images-left-right-float');
+              if (image_leftright.length) {
                 gsap.fromTo(
                   ".images-left-right-float",
                   { transform: "translate(0, 0px)" }, // Start position
@@ -862,30 +902,42 @@ cards.forEach((tmpOnHover) => {
                     ease: "none", // No easing for linear scrolling effect
                   }
                 );
-              });
+              }
+             
+            });
+
+            
             $(document).ready(function(){
-              gsap.to(".images-r", {
-                scrollTrigger:{
-                  // trigger: ".images",
-                  start: "top bottom", 
-                  end: "bottom top", 
-                  scrub: 1,
-                  // markers: true
-                },
-                x: -150,
-              })
+              let image_r = document.querySelectorAll('.images-r');
+              if (image_r.length) {
+                gsap.to(".images-r", {
+                  scrollTrigger:{
+                    // trigger: ".images",
+                    start: "top bottom", 
+                    end: "bottom top", 
+                    scrub: 1,
+                    // markers: true
+                  },
+                  x: -150,
+                })
+              }
+          
             });
             $(document).ready(function(){
-              gsap.to(".images-2", {
-                scrollTrigger:{
-                  // trigger: ".images",
-                  start: "top bottom", 
-                  end: "bottom top", 
-                  scrub: 1,
-                  // markers: true
-                },
-                y: -290,
-              })
+              let images_2 = document.querySelectorAll('.images-r');
+              if (images_2.length) {
+                gsap.to(".images-2", {
+                  scrollTrigger:{
+                    // trigger: ".images",
+                    start: "top bottom", 
+                    end: "bottom top", 
+                    scrub: 1,
+                    // markers: true
+                  },
+                  y: -290,
+                })
+              }
+            
             });
         },
 

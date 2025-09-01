@@ -1447,7 +1447,7 @@ Slider Style New
         }
     }
     .title {
-        font-size: 80px;
+        font-size: 100px;
         @media #{$laptop-device} {
             font-size: 50px;
         }
@@ -2421,8 +2421,9 @@ body {
         }
         .title{
             opacity: 1;
-            text-shadow: -8px 6px 0px #5237f9;
+            text-shadow: -4px 6px 0px #5237f9;
             font-size: 150px;
+            text-transform: capitalize;
             @media #{$smlg-device} {
                 font-size: 140px;
             }

@@ -354,10 +354,19 @@
     .thumbnail-large-details{
         height: 650px;
         @media #{$laptop-device} {
-            height: auto;
+            height: 550px;
         }
         @media #{$smlg-device} {
-            height: auto;
+            height: 450px;
+        }
+        @media #{$mdsm-layout} {
+            height: 361px;
+        }
+        @media #{$sm-layout} {
+            height: 297px;
+        }
+        @media #{$small-mobile} {
+            height: 179px;
         }
     }
 }
@@ -570,7 +579,8 @@
         top: 0;
         bottom: 0;
         height: 100%;
-        background: linear-gradient(45deg,rgba(82, 55, 249, 1) 0%, rgba(237, 221, 83, 0) 100%);
+        background-blend-mode: multiply;
+        background: linear-gradient(0deg,rgba(82, 55, 249, 1) 0%, rgba(237, 221, 83, 0) 100%);
     }
     .tmp-btn{
         position: absolute;
@@ -641,6 +651,12 @@
     border-radius: 6px;
     padding: 40px;
     margin-bottom: 40px;
+    @media #{$smlg-device} {
+        padding: 20px;
+    }
+    @media #{$mdsm-layout} {
+        padding: 25px;
+    }
     .wized-header{
         margin-bottom: 10px;
         color: #fff;
@@ -695,6 +711,12 @@
     width: auto;
     padding: 35px;
     border-radius: 6px;
+    @media #{$sm-layout} {
+        padding: 20px;
+    }
+    @media #{$large-mobile} {
+        padding: 15px;
+    }
     video{
         width: 100%;
         height: auto;
@@ -705,3 +727,4 @@
 .bg_image--2-webp{
     background-image: url(../images/bg/02.webp);
 }
+

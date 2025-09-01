@@ -51,7 +51,7 @@
             }
             .close-menu {
                 .close-button {
-                    background: var(--color-card);
+                    background: var(--color-primary);
                     border: 0 none;
                     color: var(--color-white);
                     width: 40px;
@@ -110,6 +110,23 @@
                         &.active {
                             color: var(--color-primary) !important;
                         }
+                    }
+                }
+            }
+            .has-third-lev{
+                &>a{
+                    position: relative;
+                    &::after{
+                        position: absolute;
+                        content: "\e9b1";
+                        font-family: "feather" !important;
+                        right: 0;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        transition: 0.4s;
+                    }
+                    &.open{
+                        content: "\e996";
                     }
                 }
             }
