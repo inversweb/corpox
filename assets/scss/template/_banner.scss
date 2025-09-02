@@ -2511,6 +2511,11 @@ body {
                 animation: none;
             }
         }
+        .btn-read-more span{
+            i{
+                margin-left: 7px;
+            }
+        }
     }
 
     @keyframes pulse {

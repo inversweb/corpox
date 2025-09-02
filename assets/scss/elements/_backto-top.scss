@@ -72,6 +72,7 @@
     right: 38px;
     transform: translate(-50%, -50%);
     font-weight: 500;
+    mix-blend-mode: difference;
     @media #{$sm-layout} {
       right: 8px;
     }

@@ -5,38 +5,11 @@
     transition: 0.7s cubic-bezier(0.26, 0.76, 0.3, 0.75);
     position: relative;
     z-index: 1;
-    background: #121214;
     border-radius: 15px;
     box-shadow: var(--shadow-1);
-
-    &::before {
-        content: "";
-        display: inline-block;
-        width: 8px;
-        height: 8px;
-        border-radius: 100px;
-        position: absolute;
-        top: 20px;
-        left: 25px;
-        z-index: 1;
-        color: rgba(0, 0, 0, 0.07);
-        background-color: rgba(255, 255, 255, 0.15);
-        box-shadow: 10px 0 0 rgba(255, 255, 255, 0.15), 20px 0 0 rgba(255, 255, 255, 0.15);
+    &::after{
+        border-radius: 15px;
     }
-    
-    &::after {
-        position: absolute;
-        content: "";
-        inset: -1px;
-        background: rgba(255, 255, 255, 0.2);
-        z-index: -1;
-        border-radius: inherit;
-        -webkit-transition: all 1s ease-in;
-        -o-transition: all 1s ease-in;
-        transition: all 1s ease-in;
-        opacity: 0;
-    }
-
     & > a {
         display: block;
         transition: 0.7s cubic-bezier(0.26, 0.76, 0.3, 0.75);
@@ -44,7 +17,6 @@
         padding-left: 20px;
         padding-right: 20px;
         position: relative;
-        background: #121214;
         border-radius: 15px;
 
         &::before {
@@ -62,16 +34,6 @@
 
    
 
-    &:hover {
-        &::after {
-            background: -webkit-gradient(linear, left top, right top, color-stop(10%, #9c94d0), color-stop(#5237f9), color-stop(60%, #6053cb));
-            background: linear-gradient(90deg, #9c94d0 10%, #5237f9, #6053cb 60%);
-            -webkit-animation: bghover 15s linear infinite;
-            animation: bghover 15s linear infinite;
-            background-size: 400% 400%;
-            opacity: 1;
-        }
-    }
 
     .content {
         padding: 30px 20px;
@@ -142,7 +104,7 @@
                 pointer-events: auto;
                 background: none;
                 border: 1px solid var(--color-border-3);
-
+                margin: auto;
                 .tmp-icon-svg {
                     opacity: 0;
                     width: 0px;
@@ -153,7 +115,7 @@
                 }
                 &:hover {
                     border: none;
-                    background: linear-gradient(96deg, var(--color-primary) 2.41%, #8680ff 48.93%, var(--color-primary) 94.5%);
+                    background: var(--color-primary);
                     .tmp-icon-svg {
                         opacity: 1;
                         width: 16px;
@@ -713,3 +675,69 @@
     }
 }
 
+.splash_bg{
+    background: #000;
+    .service.service__style--1 .icon img {
+        max-height: 100px;
+    }
+}
+
+.service-feature-main-wrapper-splash{
+    position: relative;
+    perspective: 1200px;
+    // overflow: hidden;
+    border-radius: 6px;
+    height: 100%;
+    .inner{
+        position: relative;
+        transition-property: box-shadow, transform;
+        transition-duration: 0.6s;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        transform-style: preserve-3d;
+        height: 100%;
+        .front-service-feature{
+            transform-style: preserve-3d;
+            backface-visibility: hidden;
+            backface-visibility: hidden;
+            transition: 0.6s;
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+            transform-style: preserve-3d;
+        }
+        .back-service-feature{
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform: rotateY(180deg) translateZ(1px);
+            background: var(--color-primary);
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: baseline;
+            justify-content: space-between;
+            text-align: center;
+            border-radius: 6px;
+            text-align: left;
+            transform-style: preserve-3d;
+            backface-visibility: hidden;
+            backface-visibility: hidden;
+            transition: 0.6s;
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+            transform-style: preserve-3d;
+        }
+    }
+    &:hover{
+        .inner{
+            transform: rotateY(180deg);
+            transform-origin: 50% 50% !important;
+            .front-service-feature{
+                backface-visibility: inherit;
+                backface-visibility: inherit;
+            }
+        }
+    }
+}
+
+.splash_bg{
+    --color-card: #0a0a0a;
+}

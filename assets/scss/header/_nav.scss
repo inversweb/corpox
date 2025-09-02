@@ -151,7 +151,7 @@
                         &.demos-area-drop-down{
                             padding: 22px 20px;
                             .mega-menu-item{
-                                padding-left: 0;
+                                // padding-left: 0;
                             }
                         }
                         .mega-menu-item {
@@ -203,7 +203,7 @@
                         opacity: 1;
                         visibility: visible;
                         clip: rect(0px, 100vw, 200vh, -30px);
-                        transition: clip 0.6s linear, opacity 0.4s linear;
+                        transition: clip 0.8s linear, opacity 0.8s linear;
                     }
                 }
 
@@ -265,9 +265,10 @@
     ul.mega-menu-item{
         display: flex;
         align-items: flex-start;
+        justify-content: center;
         flex-wrap: wrap;
-        max-height: 520px;
-        gap: 20px;
+        max-height: 620px;
+        gap: 19px;
         overflow: hidden;
         overflow-y: scroll !important;
         scrollbar-width: none;
