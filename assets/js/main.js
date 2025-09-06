@@ -45,6 +45,7 @@
             invJs.imageSlideGsap();
             invJs.preloaderWithBannerActivation();
             invJs.ursorAnimate();
+            invJs.stickyTopelements();
         },
 
         backtotopLeft: function () {
@@ -1007,22 +1008,82 @@
         },
 
         ursorAnimate: function () {
-            var myCursor = $('.mouse-cursor');
+            var myCursor = jQuery(".mouse-cursor");
             if (myCursor.length) {
-                if ($('body')) {
-                    const e = document.querySelector('.cursor-inner'),
-                        t = document.querySelector('.cursor-outer');
-                    let n, i = 0,
-                        o = !1;
-                    window.onmousemove = function (s) {
-                        o || (t.style.transform = "translate(" + s.clientX + "px, " + s.clientY + "px)"), e.style.transform = "translate(" + s.clientX + "px, " + s.clientY + "px)", n = s.clientY, i = s.clientX
-                    }, $('body').on("mouseenter", "a, .cursor-pointer", function () {
-                        e.classList.add('cursor-hover'), t.classList.add('cursor-hover')
-                    }), $('body').on("mouseleave", "a, .cursor-pointer", function () {
-                        $(this).is("a") && $(this).closest(".cursor-pointer").length || (e.classList.remove('cursor-hover'), t.classList.remove('cursor-hover'))
-                    }), e.style.visibility = "visible", t.style.visibility = "visible"
-                }
+              if ($("body")) {
+                const e = document.querySelector(".cursor-inner"),
+                  t = document.querySelector(".cursor-outer");
+                let n,
+                  i = 0,
+                  o = !1;
+                (window.onmousemove = function (s) {
+                  o ||
+                    (t.style.transform =
+                      "translate(" + s.clientX + "px, " + s.clientY + "px)"),
+                    (e.style.transform =
+                      "translate(" + s.clientX + "px, " + s.clientY + "px)"),
+                    (n = s.clientY),
+                    (i = s.clientX);
+                }),
+                  $("body").on(
+                    "mouseenter",
+                    "a, button, .cursor-pointer",
+                    function () {
+                      e.classList.add("cursor-hover"),
+                        t.classList.add("cursor-hover");
+                    }
+                  ),
+                  $("body").on(
+                    "mouseleave",
+                    "a, button, .cursor-pointer",
+                    function () {
+                      ($(this).is("a") &&
+                        $(this).closest(".cursor-pointer").length) ||
+                        (e.classList.remove("cursor-hover"),
+                        t.classList.remove("cursor-hover"));
+                    }
+                  ),
+                  (e.style.visibility = "visible"),
+                  (t.style.visibility = "visible");
+              }
             }
+
+        },
+
+
+        stickyTopelements: function () {
+            var stickyElement = $('.inversweb-sticky-section');
+
+            stickyElement.each(function () {
+                var $this = $(this);
+
+                $(window).on("scroll", function () {
+                    var windowTop = $(window).scrollTop();     // Scroll position
+                    var windowHeight = $(window).height();     // Window height
+                    var triggerPoint = windowTop + (windowHeight * 0.2); // Top theke 20%
+
+                    var elementTop = $this.offset().top;       // Section position
+
+                    if (triggerPoint >= elementTop) {
+                        $this.addClass('zoomactive');
+                    } else {
+                        $this.removeClass('zoomactive');
+                    }
+                });
+            });
+
+
+            var masonary = $('.invers-theme-masonary');
+            masonary.each(function () {
+                $('.invers-theme-masonary').imagesLoaded(() => {
+                    $('.invers-theme-masonary').masonry({
+                        itemSelector: '.invers-masonary-item',
+                        horizontalOrder: true,
+                    });
+                })
+            })
+
+
         },
 
 
