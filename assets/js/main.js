@@ -227,12 +227,12 @@
 
           if (preload) {
             var maxTimeout = setTimeout(function () {
-              preload.classList.add("loaded"); // max 3 sec por off
+              preload.classList.add("loaded"); 
             }, 2500);
 
             window.addEventListener('load', function () {
-              clearTimeout(maxTimeout); // max timeout cancel
-              preload.classList.add("loaded"); // joto fast load hoy turant off
+              clearTimeout(maxTimeout); 
+              preload.classList.add("loaded");
             });
           }
 

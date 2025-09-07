@@ -589,7 +589,7 @@ body{
             left: 0;
             z-index: 0;
             content: "\e92c";
-            color: #106eea;
+            color: var(--color-primary);
             font-size: 20px;
             font-family: 'feather' !important;
         }

@@ -279,11 +279,25 @@
         }
         li{
             flex-basis: 18.8%;
-            background: #121010;
+            background: #141414;
             border-radius: 2px;
             overflow: hidden;
             display: block;
             transition: .3s;
+            &:nth-child(2n){
+                background: #f3f3f3;
+                a:nth-child(2){
+                    color: #141414;
+                    &:hover{
+                        color: #141414 !important;
+                    }
+                }
+                &:hover{
+                     a:nth-child(2){
+                        color: #141414;
+                    }
+                }
+            }
             @media #{$mdsm-layout} {
                 flex-basis: 100%;
                 width: 100%;
