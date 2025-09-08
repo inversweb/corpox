@@ -5,10 +5,10 @@
     transition: 0.7s cubic-bezier(0.26, 0.76, 0.3, 0.75);
     position: relative;
     z-index: 1;
-    border-radius: 15px;
+    border-radius: 10px;
     box-shadow: var(--shadow-1);
     &::after{
-        border-radius: 15px;
+        border-radius: 10px;
     }
     & > a {
         display: block;
@@ -357,11 +357,17 @@
     align-items: center;
     .display-two {
         font-size: 64px;
+        @media #{$laptop-device} {
+            font-size: 46px;
+        }
+        @media #{$smlg-device} {
+            font-size: 44px;
+        }
         @media #{$md-layout} {
-            font-size: 52px;
+            font-size: 42px;
         }
         @media #{$sm-layout} {
-            font-size: 44px;
+            font-size: 38px;
         }
     }
     &.slider-style-1  {
@@ -371,6 +377,12 @@
                 padding: 0 15%;
                 font-size: 18px;
                 line-height: 1.6;
+                @media #{$md-layout} {
+                    padding: 0;
+                }
+                @media #{$sm-layout} {
+                    padding: 0;
+                }
             }
 
             .title {
@@ -580,6 +592,9 @@
             &.one{
                 top: 20%; 
                 left: 5%; 
+                @media #{$laptop-device} {
+                    left: 1%; 
+                }
                 @media #{$smlg-device} {
                     left: 1%; 
                 }
@@ -587,13 +602,21 @@
             &.two{
                 top: 30%; 
                 left: 7%; 
+                
                 @media #{$smlg-device} {
+                    left: 3%; 
+                }
+                @media #{$laptop-device} {
                     left: 3%; 
                 }
             }
             &.three{
                 top: 40%; 
                 left: 9%; 
+                
+                 @media #{$laptop-device} {
+                    left: 5%; 
+                }
                  @media #{$smlg-device} {
                     left: 5%; 
                 }
@@ -601,6 +624,10 @@
             &.four{
                 top: 50%; 
                 left: 11%; 
+                
+                 @media #{$laptop-device} {
+                    left: 7%; 
+                }
                  @media #{$smlg-device} {
                     left: 7%; 
                 }
@@ -608,6 +635,10 @@
             &.five{
                 top: 60%; 
                 left: 15%; 
+                
+                 @media #{$laptop-device} {
+                    left: 9%; 
+                }
                  @media #{$smlg-device} {
                     left: 9%; 
                 }
@@ -615,6 +646,10 @@
             &.six{
                 top: 70%; 
                 left: 19%; 
+                
+                 @media #{$laptop-device} {
+                    left: 11%; 
+                }
                  @media #{$smlg-device} {
                     left: 11%; 
                 }
@@ -625,17 +660,28 @@
                  @media #{$smlg-device} {
                     left: 13%; 
                 }
+                 @media #{$laptop-device} {
+                    left: 15%; 
+                }
             }
             &.eight{
                 top: 20%;
                 right: 5%;
+                @media #{$laptop-device} {
+                    right: 1%; 
+                }
                   @media #{$smlg-device} {
                     right: 1%; 
                 }
+                  
             }
             &.nine{
                 top: 30%;
                 right: 7%;
+                
+                  @media #{$laptop-device} {
+                    right: 3%; 
+                }
                   @media #{$smlg-device} {
                     right: 3%; 
                 }
@@ -643,6 +689,10 @@
             &.ten{
                 top: 40%;
                 right: 9%;
+                
+                  @media #{$laptop-device} {
+                    right: 5%; 
+                }
                   @media #{$smlg-device} {
                     right: 5%; 
                 }
@@ -650,6 +700,10 @@
             &.eleven{
                 top: 50%;
                 right: 11%;
+                
+                  @media #{$laptop-device} {
+                    right: 7%; 
+                }
                   @media #{$smlg-device} {
                     right: 7%; 
                 }
@@ -657,6 +711,10 @@
             &.twelve{
                 top: 60%;
                 right: 15%;
+                
+                  @media #{$laptop-device} {
+                    right: 9%; 
+                }
                   @media #{$smlg-device} {
                     right: 9%; 
                 }
@@ -664,6 +722,10 @@
             &.thirteen{
                 top: 70%;
                 right: 19%;
+                
+                  @media #{$laptop-device} {
+                    right: 11%; 
+                }
                   @media #{$smlg-device} {
                     right: 11%; 
                 }
@@ -671,7 +733,11 @@
             &.fourteen{
                 top: 80%;
                 right: 25%;
-                  @media #{$smlg-device} {
+                
+                @media #{$laptop-device} {
+                    right: 15%; 
+                }
+                @media #{$smlg-device} {
                     right: 13%; 
                 }
             }
@@ -712,6 +778,25 @@
 
 .inversweb-single-demos-with-mobile{
     position: relative;
+    &.with-white-version{
+        .bg-card{
+            background: #fff;
+            &::after{
+                background: #fff;
+            }
+        }
+        .invers-mobile-view{
+            border-color: #ffffff1f;
+            background: rgb(255 255 255 / 6%);
+        }
+        .single-demo .title{
+            color: #242424;
+        }
+        .tmp-preview-wrap .tmp-view-btn{
+            border-color: var(--color-primary);
+            background: var(--color-primary);
+        }
+    }
     .invers-mobile-view{
         position: absolute;
         right: -39px;
@@ -773,7 +858,7 @@
     font-weight: 700;
     line-height: 0.8em;
 
-    background: linear-gradient(to top, rgba(1, 1, 1, 0) 0%, var(--color-primary) 100.6%);
+    background: linear-gradient(to top, rgba(1, 1, 1, 0) 0%, #4a4a4a 100.6%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     opacity: .3;
@@ -789,7 +874,7 @@
     gap: 30px;
     justify-content: space-between;
     &>div{
-        flex-basis: 48.3%;
+        flex-basis: calc(50% - 15px);
     }
     .single-slick-slide{
         margin-top: 0;

@@ -198,6 +198,9 @@
     padding-left: 15px;
     margin-bottom: 10px;
     position: relative;
+    @media #{$large-mobile} {
+        gap: 5px;
+    }
     &::after{
         position: absolute;
         content: '';
