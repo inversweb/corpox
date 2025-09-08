@@ -46,6 +46,9 @@
 
         .header-btn {
             margin-left: 25px;
+            @media #{$smlg-device} {
+                margin-left: 5px;
+            }
             @media #{$md-layout} {
                 margin-left: 0;
             }
@@ -234,6 +237,9 @@
         display: flex;
         align-items: center;
         gap: 30px;
+        @media #{$smlg-device} {
+            gap: 15px;
+        }
         @media #{$mdsm-layout} {
             gap: 15px;
         }

@@ -121,7 +121,8 @@
         }
     }
     .mainmenu-nav .mainmenu li.with-megamenu .tmp-megamenu.with-mega-item-2.full-width-mega .wrapper .bg-content {
-        background: -webkit-linear-gradient(var(--color-card), #f5f5f5);
+        background: -webkit-linear-gradient(var(--color-card), #efefef);
+        -webkit-background-clip: text;
     }
     .mainmenu-nav .mainmenu li.has-droupdown .submenu li a:hover, .mainmenu-nav .mainmenu li.has-droupdown .submenu li a.active {
         color: var(--color-white) !important;
@@ -147,11 +148,44 @@
             filter: brightness(0) saturate(100%) invert(28%) sepia(36%) saturate(603%) hue-rotate(201deg) brightness(89%) contrast(88%);
         }
     }
+    .popup-mobile-menu .inner .header-top .close-menu .close-button i{
+        color: #fff;
+    }
+    .tmp-splite-style .split-inner{
+        .read-more-btn{
+            i{
+                color: #fff;
+            }
+        }
+    }
+    .over-gradient-primary .tmp-btn {
+        background: #ffffff;
+        color: #000 !important;
+        &:hover{
+            color: #fff !important;
+        }
+    }
+    .section-title .subtitle {
+        color: var(--color-primary);
+    }
     .tmp-slick-arrow button.slick-arrow:hover::before {
         filter: brightness(0) saturate(100%) invert(99%) sepia(8%) saturate(181%) hue-rotate(235deg) brightness(117%) contrast(100%);
     }
-    .team-wrapper5:hover .content-area .share {
+    .team-wrapper5:hover .content-area .share,
+    .social-default li a:hover {
         color: #fff;
+    }
+    .slider-style-1.variation-default .banner-13-inner.inner{
+        .title span{
+            color: #1b1b1c !important;
+            &.text-decoration-underline{
+                color: var(--color-primary) !important;
+            }
+        }
+        p{
+            color: #1b1b1b !important;
+        }
+
     }
 
     .text-split-wrap-video .title{
@@ -245,6 +279,7 @@
     }
     .single-modern-case-studies .inner-content-area .tags {
         background: rgb(255 255 255 / 13%);
+        border: 1px solid rgb(255 255 255 / 30%);
     }
     .mainmenu .with-megamenu .tmp-megamenu .demos-area-drop-down ul.mega-menu-item li {
         background: #f3f3f3;
