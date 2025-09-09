@@ -145,7 +145,7 @@
 
     .tmp-slick-arrow button.slick-arrow{
         &::before{
-            filter: brightness(0) saturate(100%) invert(28%) sepia(36%) saturate(603%) hue-rotate(201deg) brightness(89%) contrast(88%);
+            filter: brightness(0) saturate(100%) invert(83%) sepia(0%) saturate(0%) hue-rotate(162deg) brightness(79%) contrast(91%);
         }
     }
     .popup-mobile-menu .inner .header-top .close-menu .close-button i{
@@ -359,6 +359,24 @@
     .tmp-slider-style-1.with-bg-tin {
         background-image: url(../images/shape/03.webp);
     }
+
+
+    .cursor-inner {
+        background: #0e0e0e73;
+    }
+
+    .cursor-inner.cursor-hover {
+        background: #ffffff41;
+        mix-blend-mode: normal;
+    }
+
+    .cursor-outer {
+        border: 2px solid #0e0e0e73 !important;
+        mix-blend-mode: normal;
+    }
+
+
+
     // overlay color
     [data-black-overlay]:before {
         background-color: #fff;

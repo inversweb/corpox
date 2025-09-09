@@ -753,6 +753,9 @@
     background: #0a0a0a;
     .service.service__style--1 .icon img {
         max-height: 100px;
+        @media #{$md-layout} {
+            max-width: 70px;
+        }
     }
 }
 
@@ -844,6 +847,16 @@
         transform: translateX(-50%);
         z-index: -1;
         pointer-events: none;
+    }
+}
+.header-splash{
+    .btn-small{
+        @media #{$smlg-device} {
+            padding: 0 5px;
+        }
+        @media #{$md-layout} {
+            padding: 0 15px;
+        }
     }
 }
 .title-bg-demos{
