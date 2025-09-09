@@ -94,6 +94,9 @@
             }
             & + li {
                 border-top: 1px solid var(--color-border);
+                @media #{$md-layout} {
+                    border-top: none;
+                }
             }
         }
 
@@ -160,6 +163,11 @@
             display: none;
             @media #{$mdsm-layout} {
                 padding-left: 0;
+            }
+            .bg-content{
+                @media #{$mdsm-layout} {
+                    display: none;
+                }
             }
         }
 

@@ -30,6 +30,9 @@
         .content {
             padding: 30px;
             padding-top: 22px;
+            @media #{$md-layout} {
+                padding: 18px;
+            }
             @media #{$sm-layout} {
                 padding: 16px 14px;
             }

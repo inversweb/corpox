@@ -815,17 +815,27 @@
         border: 2px solid #222222;
         backdrop-filter: blur(7.5px);
         display: block;
-            &::before{
-                position: absolute;
-                content: "";
-                background: #ffffff;
-                border-radius: 5px;
-                top: 7px;
-                left: 50%;
-                height: 2px;
-                width: 28px;
-                transform: translateX(-50%);
-            }
+        @media #{$laptop-device} {
+            right: -20px;
+            bottom: 69px;
+            width: 110px;
+        }
+        @media #{$smlg-device} {
+            right: -20px;
+            bottom: 69px;
+            width: 110px;
+        }
+        &::before{
+            position: absolute;
+            content: "";
+            background: #ffffff;
+            border-radius: 5px;
+            top: 7px;
+            left: 50%;
+            height: 2px;
+            width: 28px;
+            transform: translateX(-50%);
+        }
         img{
             border-radius: 2px;
         }
