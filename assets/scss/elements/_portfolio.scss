@@ -611,6 +611,7 @@
                     svg{
                         path{
                             transition-delay: .1s;
+                            fill: #16181c;
                         }
                     }
                 }
@@ -635,7 +636,7 @@
                 svg{
                     animation: arrowUpDown 0.3s linear;
                     path{
-                        fill: #fff;
+                        fill: #fff !important;
                     }
                 }
             }

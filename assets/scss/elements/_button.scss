@@ -52,9 +52,6 @@
         opacity: 0.5;
         z-index: -1;
 
-
-
-
         content: "";
         position: absolute;
         -webkit-transition-duration: 800ms;
@@ -305,6 +302,12 @@
                 }
             }
         }
+    }
+    &:focus{
+        box-shadow: none;
+        border: none;
+        background-color: unset;
+        background: var(--color-primary);
     }
 
     &.btn-border {
