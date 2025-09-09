@@ -214,24 +214,30 @@
         portfoliobounceAnimation: function () {
 
             if (device_width > 991) {
-              let jump_items = document.querySelectorAll(".tmp_jump_animation-wrapper .tmp-jump__item");
-              
-              if (jump_items.length) {
-                gsap.set(jump_items, { opacity: 0, scale: 1.15, rotation: 0 });
-                gsap.to(jump_items, {
-                  scrollTrigger: {
-                    trigger: ".tmp_jump_animation-wrapper .tmp-jump__item",
-                    start: "top 95%"
-                  },
-                  opacity: 1.3,
-                  scale: 1,
-                  duration: 1,
-                  ease: "bounce",
-                  stagger: 0.3,
-                  rotation: 0
-                });
-              }
+          // each wrapper loop 
+          document.querySelectorAll(".tmp_jump_animation-wrapper").forEach(wrapper => {
+            let jump_items = wrapper.querySelectorAll(".tmp-jump__item");
+
+            if (jump_items.length) {
+              gsap.set(jump_items, { opacity: 0, scale: 1.15, rotation: 0 });
+
+              gsap.to(jump_items, {
+                scrollTrigger: {
+                  trigger: wrapper,  // every wrapper diffrent trigger
+                  start: "top 95%"
+                },
+                opacity: 1,
+                scale: 1,
+                duration: 1,
+                ease: "bounce",
+                stagger: 0.3,
+                rotation: 0
+              });
             }
+          });
+        }
+
+
 
         },
 
