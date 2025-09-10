@@ -749,14 +749,31 @@
     }
 }
 
-.splash_bg{
-    background: #0a0a0a;
+.service-feature-main-wrapper-splash{
+    .service.service__style--1 .icon{
+        border: 1px solid #222222;
+        background: #222222;
+        width: 90px;
+        height: 90px;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 25px;
+        border-radius: 50%;
+    }
     .service.service__style--1 .icon img {
-        max-height: 100px;
+        max-height: 50px;
         @media #{$md-layout} {
-            max-width: 70px;
+            max-width: 50px;
         }
     }
+}
+
+
+.splash_bg{
+    background: #0a0a0a;
+
 }
 
 

@@ -1,81 +1,99 @@
-
-/**************************************
- CSS Index  
-****************************
-
-/--- Default Styles -----/
-
-01.Variables
-02.Mixins
-03.Reset
-04.Typography
-05.Extend
-06.Animations
-07.Shortcode
-08.Spacing
-09.Common
-10.Forms
-11.Sal
-12.Text Animation
-13.Themebg
-
-/--- Header Styles -----/
-
-01.Headerdefault
-02.Nav
-03.Header Top
-04.HeaderTopBar
-05.Mobilemenu
-
-/--- Elements -----/
-
-01.Breadcrumb
-02.Sectiontitle
-03.Button
-04.Service
-05.Card
-06.Counter
-07.Progressbar
-08.Accordion
-09.Social Share
-10.Team
-11.Portfolio
-12.Testimonial
-13.Slickslide
-14.Timeline
-15.Call to Action
-16.Tab
-17.Pricing
-18.Split
-19.Vedio
-20.Gallery
-21.Contact
-22.Brand
-23.404
-24.Advance Tab
-25.Advancepricing
-26.Contact Form
-27.Swicher
-28.Backto Top
-29.About
-30.Newsletter
-
-/--- Blog -----/
-01.Blog
-02.Sidebar
-03.Blog Details
-
-/--- Footer -----/
-01.Footer
-02.Copyright
-
-/--- Template -----/
-01.Banner
-02.Portfoliodetails
-03.Splash
-04.Lightmode
-
-***************************************/
+/*********************************************************************************
+  Template Name: Corpox - Business & Consulting Bootstrap5 Template
+  Description: Transform your business with expert consulting. Our team delivers strategic insights, innovative solutions, and professional guidance to help you achieve lasting success.
+  Note: This is style css.
+**********************************************************************************/
+/**************************************************************
+  STYLESHEET INDEXING
+  |
+  |
+  |___ Default Styles
+  | |
+  | |___ variables
+  | |___ mixins
+  | |___ reset
+  | |___ typography
+  | |___ extend
+  | |___ animations
+  | |___ shortcode
+  | |___ spacing
+  | |___ edu-common
+  | |___ forms
+  | |___ sal
+  | |___ text-animation
+  |
+  |
+  |___Header Styles
+  | |___ header-common
+  | |___ headertop
+  | |___ offertopbar
+  | |___ headermid
+  | |___ social-share
+  | |___ header
+  | |___ nav
+  | |___ mega-menu
+  | |___ mobilemenu
+  | |___ offcanvas
+  | |___ one-page-navigation
+  |
+  |
+  |___Elements Styles
+  | |___ button
+  | |___ section-title
+  | |___ breadcrumb
+  | |___ card
+  | |___ course-meta
+  | |___ service
+  | |___ feature
+  | |___ about
+  | |___ callto-action
+  | |___ accordion
+  | |___ image-gallery
+  | |___ counterup
+  | |___ pricingtable
+  | |___ badge
+  | |___ team
+  | |___ social
+  | |___ pagination
+  | |___ backtotop
+  | |___ newsletterform
+  | |___ brand
+  | |___ portfolio
+  | |___ contact
+  | |___ testimonial
+  | |___ advance-tab
+  | |___ category
+  | |___ instagram
+  | |___ split
+  | |___ countdown
+  | |___ progressbar
+  | |___ category-box
+  | |___ course-filter
+  | |___ modal
+  | |___ list
+  | |___ search
+  | |___ video
+  | |___ 404
+  |___Blog Styles
+  | |___ blog
+  | |___ post-default
+  | |___ sidebar
+  | |___ blog-details
+  |___Template Styles
+  | |___ banner
+  | |___ course-details
+  | |___ course-sidebar
+  | |___ contact
+  | |___ sidebar
+  | |___ course-action-bottom
+  |___Footer Styles
+  | |___ footer
+  | |___ copyright
+  | |___ back-to-top
+  |
+  |
+  |___ END STYLESHEET INDEXING
+***************************************************************/
 
 
 
@@ -196,7 +214,7 @@
 @import 'template/banner';
 @import 'template/portfoliodetails';
 @import 'template/splash';
-@import 'template/lightmode';
 @import 'template/application';
 @import 'template/collaborate';
 @import 'template/widget';
+@import 'template/lightmode';
