@@ -840,7 +840,7 @@
                 b{
                     color: var(--color-heading);
                     text-align: center;
-                    background: linear-gradient(to right, #fff 20%, #ffe000 40%, #edff00 60%, #fff 80%);
+                    background: linear-gradient(to right, #fff 20%, #fd53d8 40%, #fd53d8 60%, #fff 80%);
                     background-size: 200% auto;
                     color: #000;
                     background-clip: text;
@@ -1142,4 +1142,18 @@
     background: #242424;
     position: relative;
     z-index: 1;
+}
+
+.emoje-controlder{
+    position: relative;
+    .right-top{
+        position: absolute;
+        right: 15%;
+        top: 60px;
+    }
+    .left-bottom{
+        position: absolute;
+        left: 15%;
+        top: 7%;
+    }
 }
