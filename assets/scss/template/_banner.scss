@@ -2464,6 +2464,20 @@ body {
         @media #{$sm-layout} {
             max-width: 90%;
         }
+        &.no-radious{
+            &::after{
+                border-radius: 0;
+                animation: none;
+                height: 500px;
+                border-radius: 6px;
+            }
+            &::before{
+                border-radius: 0;
+                animation: none;
+                height: 645px;
+                border-radius: 6px;
+            }
+        }
         &::after{
             content: "";
             border-radius: 50%;
