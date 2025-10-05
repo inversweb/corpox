@@ -14,8 +14,21 @@
     .logo-dark{
         display: block;
     }
+    .header-default.header-landing.sticky {
+        background:  #fff !important;
+    }
     .contact-with-us-service .title {
         color: #fff;
+    }
+    .tmp-single-product__content .quantity-area .wishlist-btn{
+        &:hover{
+            i{
+                color: #fff;
+            }
+        }
+    }
+    .tmp-single-wized .wized-body .single-categories li a {
+        background: #c5c5c529;
     }
     ul.categorys-widget-stndard li a {
         background: rgb(229 229 229 / 32%);

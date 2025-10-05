@@ -51,6 +51,7 @@
             invJs.stickyTopelements();
             invJs.dateUpdate();
             invJs.smoothScroll();
+            invJs.onepageMultipage();
         },
         
 
@@ -377,18 +378,28 @@
 
         preloader: function () {
 
+
           var preload = document.querySelector('#inverweb-load');
 
           if (preload) {
+            var isLoaded = false;
+
             var maxTimeout = setTimeout(function () {
-              preload.classList.add("loaded"); 
+              if (!isLoaded) {
+                preload.classList.add("loaded");
+                isLoaded = true;
+              }
             }, 2500);
 
             window.addEventListener('load', function () {
-              clearTimeout(maxTimeout); 
-              preload.classList.add("loaded");
+              if (!isLoaded) {
+                clearTimeout(maxTimeout);
+                preload.classList.add("loaded");
+                isLoaded = true;
+              }
             });
           }
+
 
         },
         
@@ -1258,6 +1269,29 @@
               $(
                 ".popup-mobile-menu .mainmenu .has-dropdown > a"
               ).removeClass("open");
+          });
+        },
+        
+        onepageMultipage: function (params) {
+            document.querySelectorAll('.tab_wrapper').forEach(tabWrapper => {
+            const tabButtons = tabWrapper.querySelectorAll('.tabs-nav .nav-links');
+            const tabPanes = tabWrapper.querySelectorAll('.tab-pane');
+
+            tabButtons.forEach(btn => {
+              btn.addEventListener('click', () => {
+                // Remove active classes
+                tabButtons.forEach(b => b.classList.remove('active'));
+                tabPanes.forEach(p => p.classList.remove('active', 'show'));
+
+                // Activate clicked tab
+                btn.classList.add('active');
+                const targetSelector = btn.getAttribute('data-target');
+                const targetPane = tabWrapper.querySelector(targetSelector);
+                if (targetPane) {
+                  targetPane.classList.add('active', 'show');
+                }
+              });
+            });
           });
         },
 

@@ -3,8 +3,7 @@
 ----------------------*/
 .service {
     &.service__style--1 {
-        padding: 30px 26px;;
-        padding-bottom: 30px;
+        padding: 30px 26px;
         transition: transform 0.65s cubic-bezier(0.05, 0.2, 0.1, 1),box-shadow 0.65s cubic-bezier(0.05, 0.2, 0.1, 1);
         position: relative;
         z-index: 2;
